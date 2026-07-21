@@ -228,10 +228,10 @@ export default function App() {
         onClose={() => setActiveToast(null)}
       />
 
-      {/* Top Header Banner matching Puffin Navbar Reference Layout */}
-      <header className="thick-header-banner flex items-center justify-between px-[32px] py-[16px]">
-        {/* Left: Brand Logo */}
-        <div className="flex items-center gap-[10px]">
+      {/* Top Header Banner matching Right-Aligned Navbar Reference Layout */}
+      <header className="thick-header-banner flex flex-wrap items-center justify-between px-[24px] py-[16px] gap-[16px]">
+        {/* Far Left: Brand Logo ONLY */}
+        <div className="flex items-center gap-[10px] shrink-0">
           <div className="p-[6px] bg-[#FF6200]/10 border border-[#FF6200]/30 rounded-[6px]">
             <ShieldAlert className="w-[22px] h-[22px] text-[#FF6200]" strokeWidth={1.5} />
           </div>
@@ -240,10 +240,10 @@ export default function App() {
           </span>
         </div>
 
-        {/* Right Side Group: Right-Aligned Navigation Links + Action CTA */}
-        <div className="flex items-center gap-[32px]">
-          {/* Navigation Links (Right Side Layout) */}
-          <nav className="hidden lg:flex items-center gap-[20px] text-[13px] font-mono-tech font-semibold">
+        {/* Right Side Group: Page Switching Links + Action Controls */}
+        <div className="flex flex-wrap items-center justify-end gap-[24px] ml-auto">
+          {/* Page Switching Navigation Links (Right Side Layout) */}
+          <nav className="flex flex-wrap items-center gap-[16px] text-[13px] font-mono-tech font-semibold">
             <button
               onClick={() => setActiveTab('dashboard')}
               className={`transition-colors py-[6px] px-[4px] relative ${
@@ -301,16 +301,18 @@ export default function App() {
             </button>
           </nav>
 
+          <div className="h-[18px] w-[1px] bg-[#21262D] hidden sm:block" />
+
           {/* Action Dropdown & Primary CTA Button */}
-          <div className="flex items-center gap-[12px]">
+          <div className="flex items-center gap-[10px] shrink-0">
             {/* Scenario Selection Dropdown */}
-            <div className="relative hidden md:block">
+            <div className="relative">
               <Search className="w-[14px] h-[14px] text-[#8B949E] absolute left-[10px] top-1/2 -translate-y-1/2" strokeWidth={1.5} />
               <select
                 value={selectedScenarioId || ''}
                 onChange={(e) => handleSelectScenario(e.target.value)}
                 disabled={isOffline}
-                className="pl-[30px] pr-[16px] py-[6px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[11px] font-mono-tech text-[#E6EDF3] disabled:opacity-50 min-w-[180px]"
+                className="pl-[30px] pr-[16px] py-[6px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[11px] font-mono-tech text-[#E6EDF3] disabled:opacity-50 min-w-[170px]"
               >
                 <option value="" disabled>Select Scenario...</option>
                 {scenarios.map((s) => (
@@ -331,12 +333,12 @@ export default function App() {
               <span className="font-mono-tech text-[11px] font-bold">⌘K</span>
             </button>
 
-            {/* Primary Action CTA Button (Rounded like Get a Quote) */}
+            {/* Primary Action CTA Button */}
             <button
               onClick={() => setIsEmergencyOpen(true)}
-              className="btn-primary rounded-full px-[18px] py-[8px] text-[12px] font-mono-tech flex items-center gap-[6px] shadow-lg shadow-[#FF6200]/20"
+              className="btn-primary rounded-full px-[16px] py-[7px] text-[11px] font-mono-tech flex items-center gap-[6px] shadow-lg shadow-[#FF6200]/20"
             >
-              <FileText className="w-[14px] h-[14px]" strokeWidth={1.5} /> Emergency Report
+              <FileText className="w-[13px] h-[13px]" strokeWidth={1.5} /> Emergency Report
             </button>
 
             <button
@@ -349,7 +351,7 @@ export default function App() {
 
             <button
               onClick={handleLogout}
-              className="btn-secondary py-[6px] px-[10px] text-[#F85149] border-[#F85149]/30 hover:bg-[#F85149]/10"
+              className="btn-secondary py-[6px] px-[10px] text-[#F85149] border-[#F85149]/30 hover:bg-[#F85149]/10 text-[11px]"
               title="Close Session"
             >
               Logout
