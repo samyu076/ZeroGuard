@@ -13,20 +13,20 @@
   --text-muted: #8B949E;
   --text-disabled: #4A5568;
 
-  /* Exact Risk Tier Colors */
-  --risk-safe: #2EA043;      /* Green */
-  --risk-watch: #D29922;     /* Amber */
-  --risk-warning: #DB6D28;   /* Orange */
-  --risk-critical: #F85149;  /* Red — Reserved EXCLUSIVELY for COMPOUND_CRITICAL */
+  /* Risk Colors */
+  --risk-safe: #2EA043;
+  --risk-watch: #D29922;
+  --risk-warning: #DB6D28;
+  --risk-critical: #F85149; /* Exclusively Reserved for Critical */
   
-  /* Dual Accent Tokens */
-  --accent-primary: #58A6FF;  /* Electric Cyan-Blue for nav, links, focus rings, active intelligence */
-  --accent-brand: #FF6200;    /* Safety-Orange ONLY for brand mark, primary CTAs, hero highlights */
+  /* Accent Tokens */
+  --accent-primary: #58A6FF;
+  --accent-brand: #FF6200;
 
   --font-mono: 'JetBrains Mono', 'Roboto Mono', 'IBM Plex Mono', monospace;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* PART C Motion Tokens */
+  /* Motion Tokens */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-out-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -48,8 +48,6 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
 }
 
 .font-mono-tech {
@@ -57,273 +55,87 @@ body {
   font-feature-settings: "tnum" 1;
 }
 
-/* PART D: Ambient Hero Radial Background Drift (subtle, 14s loop) */
+/* Thick Top Banner */
+.thick-header-banner {
+  background-color: #161B22;
+  border-bottom: 3px solid var(--accent-brand);
+  padding: 20px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+/* Navigation Tabs */
+.nav-tab-button {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 4px;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  color: var(--text-muted);
+  border: 1px solid transparent;
+}
+
+.nav-tab-button:hover {
+  color: var(--text-main);
+  background-color: var(--bg-card-hover);
+}
+
+.nav-tab-button.active {
+  color: #FFFFFF;
+  background-color: var(--accent-brand);
+  border-color: var(--accent-brand);
+  box-shadow: 0 2px 8px rgba(255, 98, 0, 0.3);
+}
+
+/* Tab Content Switch Animation */
+@keyframes tabFadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.98) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.tab-content-active {
+  animation: tabFadeScale var(--duration-slow) var(--ease-spring) forwards;
+}
+
+/* Premium Card Layouts */
+.zg-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  padding: 24px;
+  transition: transform var(--duration-base) var(--ease-smooth),
+              box-shadow var(--duration-base) var(--ease-smooth),
+              border-color var(--duration-base) var(--ease-smooth);
+}
+
+.zg-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Ambient drift behind tabs */
 .ambient-hero-bg {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 400px;
+  height: 380px;
   pointer-events: none;
   z-index: 0;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(88, 166, 255, 0.06) 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, rgba(255, 98, 0, 0.04) 0%, transparent 60%);
-  animation: ambientDrift 14s ease-in-out infinite alternate;
-}
-
-@keyframes ambientDrift {
-  0% {
-    background-position: 0% 0%, 100% 0%;
-  }
-  100% {
-    background-position: 10% 15%, 90% 15%;
-  }
-}
-
-/* Panel & Card System (Part B Spec) */
-.zg-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  padding: 24px;
-  transition: transform var(--duration-base) var(--ease-smooth),
-              background-color var(--duration-base) var(--ease-smooth),
-              border-color var(--duration-base) var(--ease-smooth),
-              box-shadow var(--duration-base) var(--ease-smooth);
-}
-
-.zg-card-hover:hover {
-  transform: translateY(-2px);
-  background-color: var(--bg-card-hover);
-  border-color: var(--border-hover);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-}
-
-/* Interactive Table Rows Hover Elevation */
-.zg-table-row {
-  transition: background-color var(--duration-fast) var(--ease-smooth),
-              border-color var(--duration-fast) var(--ease-smooth);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.zg-table-row:hover {
-  background-color: var(--bg-card-hover);
-  border-color: var(--accent-primary);
-}
-
-/* Modal Overlay Panel */
-.zg-modal-panel {
-  background-color: rgba(22, 27, 34, 0.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-  padding: 24px;
-  animation: modalScaleIn var(--duration-fast) var(--ease-spring) forwards;
-}
-
-@keyframes modalScaleIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Exact Risk Tier Badges */
-.badge-critical {
-  background-color: rgba(248, 81, 73, 0.15);
-  color: #F85149;
-  border: 1px solid rgba(248, 81, 73, 0.4);
-  border-radius: 4px;
-}
-
-.badge-warning {
-  background-color: rgba(219, 109, 40, 0.15);
-  color: #DB6D28;
-  border: 1px solid rgba(219, 109, 40, 0.4);
-  border-radius: 4px;
-}
-
-.badge-watch {
-  background-color: rgba(210, 153, 34, 0.15);
-  color: #D29922;
-  border: 1px solid rgba(210, 153, 34, 0.4);
-  border-radius: 4px;
-}
-
-.badge-safe {
-  background-color: rgba(46, 160, 67, 0.15);
-  color: #2EA043;
-  border: 1px solid rgba(46, 160, 67, 0.4);
-  border-radius: 4px;
-}
-
-/* Buttons System (Part B Spec: Primary Solid #FF6200, Secondary Outlined) */
-.btn-primary {
-  background-color: #FF6200;
-  color: #FFFFFF;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 13px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: 1px solid #FF6200;
-  transition: background-color var(--duration-fast) var(--ease-smooth),
-              border-color var(--duration-fast) var(--ease-smooth);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.btn-primary:hover {
-  background-color: #E05600;
-  border-color: #E05600;
-}
-
-.btn-primary:active {
-  background-color: #C44B00;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: #E6EDF3;
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 13px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: 1px solid #21262D;
-  transition: background-color var(--duration-fast) var(--ease-smooth),
-              border-color var(--duration-fast) var(--ease-smooth);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.btn-secondary:hover {
-  background-color: #1C2128;
-  border-color: #58A6FF;
-}
-
-/* Keyboard Focus State (2px solid #58A6FF outline, 2px offset) */
-button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-visible {
-  outline: 2px solid #58A6FF !important;
-  outline-offset: 2px !important;
-  box-shadow: none !important;
-}
-
-/* PART C: Skeleton Loading Animation (Shimmer Sweep 1.5s loop) */
-@keyframes shimmerSweep {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.animate-skeleton {
-  background: linear-gradient(90deg, #161B22 25%, #1C2128 50%, #161B22 75%);
-  background-size: 200% 100%;
-  animation: shimmerSweep 1.5s infinite ease-in-out;
-  border-radius: 4px;
-}
-
-/* PART C: Staggered Entrance Slide-Up Animation (translateY 12px -> 0, --ease-spring) */
-@keyframes slideUpReveal {
-  0% {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-stagger-1 { animation: slideUpReveal var(--duration-reveal) var(--ease-spring) 0ms forwards; }
-.animate-stagger-2 { animation: slideUpReveal var(--duration-reveal) var(--ease-spring) 50ms forwards; }
-.animate-stagger-3 { animation: slideUpReveal var(--duration-reveal) var(--ease-spring) 100ms forwards; }
-.animate-stagger-4 { animation: slideUpReveal var(--duration-reveal) var(--ease-spring) 150ms forwards; }
-.animate-stagger-5 { animation: slideUpReveal var(--duration-reveal) var(--ease-spring) 200ms forwards; }
-
-/* SVG Risk Path Single Ease-Out Drawing Animation (700ms --ease-spring) */
-@keyframes drawRiskPath {
-  0% {
-    stroke-dashoffset: 300;
-    opacity: 0.2;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-}
-
-.animate-draw-path {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 0;
-  animation: drawRiskPath 700ms var(--ease-spring) forwards;
-}
-
-/* Affected Node Soft Pulse (scale 1 -> 1.15 -> 1, 900ms, 2 repeats max, settles) */
-@keyframes nodeSoftPulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.15);
-    opacity: 0.85;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.animate-node-pulse {
-  animation: nodeSoftPulse 900ms var(--ease-spring) 2;
-  transform-origin: center;
-}
-
-/* PART E: Destination Zone Expanding Impact Ring (500ms --ease-out-soft) */
-@keyframes impactRing {
-  0% {
-    transform: scale(0.8);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
-  }
-}
-
-.animate-impact-ring {
-  animation: impactRing 500ms var(--ease-out-soft) 1 forwards;
-  transform-origin: center;
-}
-
-/* Toast Slide In Top-Right (translateY -12px -> 0, --duration-base) */
-@keyframes toastSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-toast {
-  animation: toastSlideIn var(--duration-base) var(--ease-spring) forwards;
+    radial-gradient(circle at 10% 20%, rgba(88, 166, 255, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 90% 10%, rgba(255, 98, 0, 0.03) 0%, transparent 50%);
 }
 
 /* Custom Scrollbars */
@@ -337,4 +149,79 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 ::-webkit-scrollbar-thumb {
   background: #21262D;
   border-radius: 3px;
+}
+
+/* Focus outline */
+*:focus-visible {
+  outline: 2px solid var(--accent-primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* General Button Classes */
+.btn-primary {
+  background-color: var(--accent-brand);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-brand);
+  transition: all var(--duration-fast) var(--ease-smooth);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #E05600;
+  border-color: #E05600;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  transition: all var(--duration-fast) var(--ease-smooth);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--accent-primary);
+}
+
+.badge-critical {
+  background-color: rgba(248, 81, 73, 0.15);
+  color: #F85149;
+  border: 1px solid rgba(248, 81, 73, 0.4);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.badge-warning {
+  background-color: rgba(219, 109, 40, 0.15);
+  color: #DB6D28;
+  border: 1px solid rgba(219, 109, 40, 0.4);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.badge-watch {
+  background-color: rgba(210, 153, 34, 0.15);
+  color: #D29922;
+  border: 1px solid rgba(210, 153, 34, 0.4);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.badge-safe {
+  background-color: rgba(46, 160, 67, 0.15);
+  color: #2EA043;
+  border: 1px solid rgba(46, 160, 67, 0.4);
+  border-radius: 4px;
+  padding: 2px 8px;
 }

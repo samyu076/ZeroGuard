@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
+import { 
+  Activity, ShieldAlert, Cpu, FileText, Command, User, Settings, 
+  Layers, Clock, Sliders, LogIn, Lock, ArrowRight, UserCheck 
+} from 'lucide-react';
 import JudgeFacingMetricsStrip from './components/JudgeFacingMetricsStrip';
 import ZoneStatusStrip from './components/ZoneStatusStrip';
 import RiskOverviewCards from './components/RiskOverviewCards';
@@ -16,7 +19,6 @@ import ComplianceCitationPanel from './components/ComplianceCitationPanel';
 import EmergencyResponseModal from './components/EmergencyResponseModal';
 import ScalabilityArchitectureModal from './components/ScalabilityArchitectureModal';
 import CommandPaletteModal from './components/CommandPaletteModal';
-import LoginModal from './components/LoginModal';
 import SettingsModal from './components/SettingsModal';
 import ToastNotification from './components/ToastNotification';
 
@@ -28,6 +30,14 @@ import {
 } from './services/api';
 
 export default function App() {
+  // Login / Auth State
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [operatorId, setOperatorId] = useState('OP-REF-2026');
+  const [passcode, setPasscode] = useState('••••••••');
+  const [assignedZone, setAssignedZone] = useState('Zone-E-Control');
+
+  // Dashboard state
+  const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard', 'spatial-map', 'replay', 'telemetry', 'statutory'
   const [scenarios, setScenarios] = useState([]);
   const [selectedScenarioId, setSelectedScenarioId] = useState('SCEN-2026-0069');
   const [graphState, setGraphState] = useState(null);
@@ -38,7 +48,6 @@ export default function App() {
   const [isEmergencyOpen, setIsEmergencyOpen] = useState(false);
   const [isArchitectureOpen, setIsArchitectureOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const [activeAlertForExplainer, setActiveAlertForExplainer] = useState(null);
@@ -66,8 +75,10 @@ export default function App() {
   };
 
   useEffect(() => {
-    loadInitialData();
-  }, []);
+    if (isAuthenticated) {
+      loadInitialData();
+    }
+  }, [isAuthenticated]);
 
   useEffect(() => {
     const handleGlobalKeyDown = (e) => {
@@ -123,12 +134,91 @@ export default function App() {
     }
   };
 
-  const scrollToRoleAction = () => {
-    const el = document.getElementById('role-action-section');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    setIsAuthenticated(true);
+    triggerToast({
+      title: 'OPERATOR AUTHENTICATED',
+      message: `Access granted for Operator ${operatorId} in ${assignedZone}.`
+    });
   };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setActiveTab('dashboard');
+    triggerToast({
+      title: 'SESSION TERMINATED',
+      message: 'Operator session safely closed.'
+    });
+  };
+
+  // Sleek operator sign-in screen initially
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-[#0D1117] flex items-center justify-center p-[24px] relative">
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,98,0,0.06)_0%,transparent_70%)]" />
+        
+        <div className="zg-modal-panel max-w-md w-full border-[#FF6200]/50 relative z-10 p-[32px] space-y-[24px]">
+          <div className="text-center space-y-[8px]">
+            <div className="inline-flex p-[12px] bg-[#FF6200]/10 border border-[#FF6200]/30 rounded-[6px]">
+              <ShieldAlert className="w-[32px] h-[32px] text-[#FF6200]" strokeWidth={1.5} />
+            </div>
+            <h2 className="text-[20px] font-bold text-[#E6EDF3] tracking-[0.02em] font-mono-tech uppercase">
+              ZERO<span className="text-[#FF6200]">GUARD</span> CONTROL SYSTEM
+            </h2>
+            <p className="text-[12px] text-[#8B949E] font-sans">
+              Enter operator credentials to access risk intelligence console.
+            </p>
+          </div>
+
+          <form onSubmit={handleLoginSubmit} className="space-y-[16px] text-[12px] font-mono-tech">
+            <div>
+              <label className="block text-[#8B949E] mb-[6px] uppercase tracking-[0.02em]">Operator Identification</label>
+              <input
+                type="text"
+                required
+                value={operatorId}
+                onChange={(e) => setOperatorId(e.target.value)}
+                className="w-full px-[12px] py-[8px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[#E6EDF3] focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-[#8B949E] mb-[6px] uppercase tracking-[0.02em]">Refinery Keycode</label>
+              <input
+                type="password"
+                required
+                value={passcode}
+                onChange={(e) => setPasscode(e.target.value)}
+                className="w-full px-[12px] py-[8px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[#E6EDF3] focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-[#8B949E] mb-[6px] uppercase tracking-[0.02em]">Assigned Control Substation</label>
+              <select
+                value={assignedZone}
+                onChange={(e) => setAssignedZone(e.target.value)}
+                className="w-full p-[8px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[#E6EDF3] focus:outline-none"
+              >
+                <option value="Zone-E-Control">Zone E: Main Control Room & Substation</option>
+                <option value="Zone-A-CDU">Zone A: Crude Distillation Unit</option>
+                <option value="Zone-B-Pump">Zone B: Hydrocracker Pump Station</option>
+                <option value="Zone-C-Tanks">Zone C: Hydrocarbon Tank Farm</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              className="btn-primary w-full py-[10px] flex items-center justify-center gap-[8px]"
+            >
+              <LogIn className="w-[16px] h-[16px]" strokeWidth={1.5} /> Establish Secure Session
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#0D1117] text-[#E6EDF3] flex flex-col font-sans relative">
@@ -139,20 +229,95 @@ export default function App() {
         onClose={() => setActiveToast(null)}
       />
 
-      {/* Control Room Header Bar */}
-      <Header
-        scenarios={scenarios}
-        selectedScenarioId={selectedScenarioId}
-        onSelectScenario={handleSelectScenario}
-        overallRiskLevel={graphState?.overall_risk_level || 'NORMAL'}
-        overallRiskScore={graphState?.overall_risk_score || 0.0}
-        isOffline={isOffline}
-        onOpenArchitecture={() => setIsArchitectureOpen(true)}
-        onOpenEmergencyReport={() => setIsEmergencyOpen(true)}
-        onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
-        onOpenLogin={() => setIsLoginOpen(true)}
-        onOpenSettings={() => setIsSettingsOpen(true)}
-      />
+      {/* C1: Google-style Premium Thick Header Banner */}
+      <header className="thick-header-banner flex flex-wrap items-center justify-between gap-[16px]">
+        <div className="flex items-center gap-[16px]">
+          <div className="flex items-center gap-[8px]">
+            <ShieldAlert className="w-[24px] h-[24px] text-[#FF6200]" strokeWidth={1.5} />
+            <span className="font-semibold text-[18px] tracking-[0.02em] text-[#E6EDF3] font-mono-tech uppercase">
+              ZERO<span className="text-[#FF6200]">GUARD</span>
+            </span>
+          </div>
+          <div className="h-[20px] w-[1px] bg-[#21262D] hidden sm:block" />
+          
+          {/* Navigation Selection Tabs */}
+          <nav className="flex items-center gap-[6px]">
+            <button
+              onClick={() => setActiveTab('dashboard')}
+              className={`nav-tab-button ${activeTab === 'dashboard' ? 'active' : ''}`}
+            >
+              Overview
+            </button>
+            <button
+              onClick={() => setActiveTab('spatial-map')}
+              className={`nav-tab-button ${activeTab === 'spatial-map' ? 'active' : ''}`}
+            >
+              Spatial Risk Map
+            </button>
+            <button
+              onClick={() => setActiveTab('replay')}
+              className={`nav-tab-button ${activeTab === 'replay' ? 'active' : ''}`}
+            >
+              Incident Replay
+            </button>
+            <button
+              onClick={() => setActiveTab('telemetry')}
+              className={`nav-tab-button ${activeTab === 'telemetry' ? 'active' : ''}`}
+            >
+              Telemetry & Permits
+            </button>
+            <button
+              onClick={() => setActiveTab('statutory')}
+              className={`nav-tab-button ${activeTab === 'statutory' ? 'active' : ''}`}
+            >
+              Statutory Compliance
+            </button>
+          </nav>
+        </div>
+
+        {/* Header Options */}
+        <div className="flex items-center gap-[12px]">
+          {/* Command Palette Trigger */}
+          <button
+            onClick={() => setIsCommandPaletteOpen(true)}
+            className="btn-secondary py-[6px] px-[12px] flex items-center gap-[6px]"
+            title="Open Command Palette (⌘K)"
+          >
+            <Command className="w-[14px] h-[14px] text-[#58A6FF]" strokeWidth={1.5} />
+            <span className="font-mono-tech text-[12px] font-bold">⌘K</span>
+          </button>
+
+          <button
+            onClick={() => setIsArchitectureOpen(true)}
+            className="btn-secondary py-[6px] px-[12px] text-[12px]"
+          >
+            Scalability
+          </button>
+
+          <button
+            onClick={() => setIsEmergencyOpen(true)}
+            className="btn-secondary py-[6px] px-[12px] text-[12px] text-[#F85149] border-[#F85149]/40 hover:bg-[#F85149]/10"
+          >
+            Emergency Report
+          </button>
+
+          <button
+            onClick={() => setIsSettingsOpen(true)}
+            className="btn-secondary py-[6px] px-[8px]"
+            title="Engine Settings"
+          >
+            <Settings className="w-[14px] h-[14px]" strokeWidth={1.5} />
+          </button>
+
+          <button
+            onClick={handleLogout}
+            className="btn-secondary py-[6px] px-[10px] text-[#F85149] border-[#F85149]/30 hover:bg-[#F85149]/10"
+            title="Close Session"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
 
       {/* C5: Persistent Judge-Facing Metrics Strip */}
       <JudgeFacingMetricsStrip overallRiskLevel={graphState?.overall_risk_level} />
@@ -160,100 +325,100 @@ export default function App() {
       {/* Persistent Plant Zone Risk Matrix Summary Strip */}
       <ZoneStatusStrip nodes={graphState?.nodes || []} />
 
-      {isOffline && (
-        <div className="bg-[#D29922]/15 border-b border-[#D29922]/40 text-[#D29922] px-[24px] py-[12px] text-[12px] font-mono-tech flex items-center justify-between relative z-10">
-          <span>
-            ⚠️ <strong>SYSTEM OFFLINE</strong>: Unable to reach ZeroGuard FastAPI backend server on port 8000. Start backend server to enable live propagation.
-          </span>
-          <button
-            onClick={loadInitialData}
-            className="btn-secondary text-[12px] py-[4px] px-[12px]"
-          >
-            Retry Connection
-          </button>
-        </div>
-      )}
-
-      {/* Main Control Room Workspace */}
-      <main className="flex-1 px-[24px] py-[24px] max-w-7xl w-full mx-auto relative z-10">
+      {/* Main Workspace with Clean Tabbed Segregation */}
+      <main className="flex-1 px-[24px] py-[32px] max-w-7xl w-full mx-auto relative z-10">
         {loading ? (
-          <div className="space-y-[24px] py-[24px]">
+          <div className="space-y-[24px]">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-[16px]">
               <div className="h-[120px] animate-skeleton rounded-[6px]" />
               <div className="h-[120px] animate-skeleton rounded-[6px]" />
               <div className="h-[120px] animate-skeleton rounded-[6px]" />
               <div className="h-[120px] animate-skeleton rounded-[6px]" />
             </div>
-            <div className="h-[480px] animate-skeleton rounded-[6px]" />
+            <div className="h-[400px] animate-skeleton rounded-[6px]" />
           </div>
         ) : (
-          <>
-            <RiskOverviewCards graphState={graphState} />
+          <div className="tab-content-active">
+            {/* TAB 1: OVERVIEW */}
+            {activeTab === 'dashboard' && (
+              <div className="space-y-[24px]">
+                <RiskOverviewCards graphState={graphState} />
 
-            {graphState?.active_alerts?.length > 0 && (
-              <div className="mb-[32px] p-[20px] rounded-[6px] bg-[#F85149]/10 border border-[#F85149]/40 flex flex-wrap items-center justify-between gap-[16px] font-mono-tech animate-stagger-5">
-                <div>
-                  <span className="font-bold text-[#F85149] text-[14px] block uppercase tracking-[0.02em]">
-                    COMPOUND_CRITICAL — STATUTORY SAFETY INTERLOCK FIRED
-                  </span>
-                  <span className="text-[12px] text-[#E6EDF3] mt-[4px] block font-sans">
-                    {graphState.active_alerts[0].title}
-                  </span>
-                </div>
-                <div className="flex items-center gap-[12px]">
-                  <button
-                    onClick={() => setIsEmergencyOpen(true)}
-                    className="btn-primary bg-[#F85149] border-[#F85149] text-[#0D1117] hover:bg-[#F85149]/90"
-                  >
-                    Auto-Generate Incident Report
-                  </button>
-                  <button
-                    onClick={() => setActiveAlertForExplainer(graphState.active_alerts[0])}
-                    className="btn-primary"
-                  >
-                    View Evidence Path
-                  </button>
-                </div>
+                {/* Compound Risk Fired Interlock Banner */}
+                {graphState?.active_alerts?.length > 0 && (
+                  <div className="p-[20px] rounded-[6px] bg-[#F85149]/10 border border-[#F85149]/40 flex flex-wrap items-center justify-between gap-[16px] font-mono-tech">
+                    <div>
+                      <span className="font-bold text-[#F85149] text-[14px] block uppercase tracking-[0.02em]">
+                        COMPOUND_CRITICAL — STATUTORY SAFETY INTERLOCK FIRED
+                      </span>
+                      <span className="text-[12px] text-[#E6EDF3] mt-[4px] block font-sans">
+                        {graphState.active_alerts[0].title}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-[12px]">
+                      <button
+                        onClick={() => setIsEmergencyOpen(true)}
+                        className="btn-primary"
+                      >
+                        Auto-Generate Incident Report
+                      </button>
+                      <button
+                        onClick={() => setActiveAlertForExplainer(graphState.active_alerts[0])}
+                        className="btn-secondary"
+                      >
+                        View Causal Path
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* Baseline Comparison Summary Panel */}
+                <BaselineComparisonPanel />
               </div>
             )}
 
-            {/* PART C: LIVE INCIDENT REPLAY MODE (With SCADA Baseline Toggle & Action Link) */}
-            <IncidentReplayPanel onScrollToAction={scrollToRoleAction} />
+            {/* TAB 2: SPATIAL RISK MAP */}
+            {activeTab === 'spatial-map' && (
+              <div className="space-y-[24px]">
+                <GraphVisualizer
+                  graphState={graphState}
+                  onSelectAlert={(alert) => setActiveAlertForExplainer(alert)}
+                />
+              </div>
+            )}
 
-            {/* PART B: COUNTERFACTUAL SCENARIO EXPLORER & HISTORICAL PATTERN MATCH */}
-            <CounterfactualExplorerPanel />
+            {/* TAB 3: INCIDENT REPLAY & EXPLORER */}
+            {activeTab === 'replay' && (
+              <div className="space-y-[24px]">
+                <IncidentReplayPanel onScrollToAction={() => setActiveTab('telemetry')} />
+                <CounterfactualExplorerPanel />
+              </div>
+            )}
 
-            {/* C4 & PART B: ROLE-AWARE ACTION DISPATCH */}
-            <div id="role-action-section">
-              <RoleAwareOutputPanel alert={graphState?.active_alerts?.[0]} />
-            </div>
+            {/* TAB 4: TELEMETRY & PERMITS */}
+            {activeTab === 'telemetry' && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-[16px]">
+                <SensorAnomalyTable
+                  nodes={graphState?.nodes}
+                  onInjectClick={() => setIsInjectorOpen(true)}
+                />
+                <PermitTimeline
+                  nodes={graphState?.nodes}
+                />
+              </div>
+            )}
 
-            {/* PHASE 1: BASELINE COMPARISON BENCHMARK PANEL */}
-            <BaselineComparisonPanel />
-
-            {/* Spatial Zone Map Visualizer Overlay */}
-            <GraphVisualizer
-              graphState={graphState}
-              onSelectAlert={(alert) => setActiveAlertForExplainer(alert)}
-            />
-
-            {/* Telemetry and Permits Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-[16px]">
-              <SensorAnomalyTable
-                nodes={graphState?.nodes}
-                onInjectClick={() => setIsInjectorOpen(true)}
-              />
-              <PermitTimeline
-                nodes={graphState?.nodes}
-              />
-            </div>
-
-            {/* PHASE 5: STATUTORY COMPLIANCE PANEL */}
-            <ComplianceCitationPanel onTriggerToast={triggerToast} />
-          </>
+            {/* TAB 5: STATUTORY STANDARDS */}
+            {activeTab === 'statutory' && (
+              <div className="space-y-[24px]">
+                <ComplianceCitationPanel onTriggerToast={triggerToast} />
+              </div>
+            )}
+          </div>
         )}
       </main>
 
+      {/* Modals */}
       <AnomalyInjectorModal
         isOpen={isInjectorOpen}
         onClose={() => setIsInjectorOpen(false)}
@@ -281,13 +446,13 @@ export default function App() {
       <CommandPaletteModal
         isOpen={isCommandPaletteOpen}
         onClose={() => setIsCommandPaletteOpen(false)}
-        onSelectCommand={() => {}}
-      />
-
-      <LoginModal
-        isOpen={isLoginOpen}
-        onClose={() => setIsLoginOpen(false)}
-        onLoginSuccess={(ops) => triggerToast({ title: 'OPERATOR AUTHENTICATED', message: `Logged in as ${ops.operatorId} (${ops.zone}).` })}
+        onSelectCommand={(cmd) => {
+          if (cmd.id.startsWith('scen-')) {
+            handleSelectScenario('SCEN-2026-0069');
+          } else {
+            setActiveTab(cmd.id.includes('replay') ? 'replay' : 'spatial-map');
+          }
+        }}
       />
 
       <SettingsModal
