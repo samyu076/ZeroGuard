@@ -29,7 +29,7 @@ export default function EmergencyResponseModal({ isOpen, onClose, alert, onTrigg
   const hasAlert = !!alert;
 
   return (
-    <div className="fixed inset-0 bg-[#0D1117]/90 backdrop-blur-md z-50 flex items-center justify-center p-[16px]">
+    <div className="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-[16px]">
       <div className={`zg-modal-panel max-w-2xl w-full relative border ${
         hasAlert ? 'border-[#F85149]/60' : 'border-[#21262D]'
       }`}>

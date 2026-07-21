@@ -54,8 +54,8 @@ export default function CommandPaletteModal({ isOpen, onClose, onSelectCommand }
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-[#0D1117]/85 backdrop-blur-md z-50 flex items-start justify-center pt-[100px] px-[16px]">
-      <div className="zg-modal-panel max-w-xl w-full relative border-[#58A6FF]/40 shadow-2xl overflow-hidden p-0">
+    <div className="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-start justify-center pt-[100px] px-[16px]">
+      <div className="zg-modal-panel max-w-xl w-full relative border border-[#58A6FF]/40 shadow-2xl overflow-hidden p-0">
         {/* Search Input Bar */}
         <div className="p-[16px] border-b border-[#21262D] flex items-center gap-[12px] bg-[#0D1117]">
           <Search className="w-[18px] h-[18px] text-[#58A6FF]" strokeWidth={1.5} />

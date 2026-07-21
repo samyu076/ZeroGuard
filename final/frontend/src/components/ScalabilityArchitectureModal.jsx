@@ -5,8 +5,8 @@ export default function ScalabilityArchitectureModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-[#0D1117]/90 backdrop-blur-md z-50 flex items-center justify-center p-[16px]">
-      <div className="zg-modal-panel max-w-3xl w-full relative border-[#58A6FF]/40">
+    <div className="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-[16px]">
+      <div className="zg-modal-panel max-w-3xl w-full relative border border-[#58A6FF]/40">
         <button
           onClick={onClose}
           className="absolute right-[16px] top-[16px] text-[#8B949E] hover:text-[#E6EDF3] p-[4px]"

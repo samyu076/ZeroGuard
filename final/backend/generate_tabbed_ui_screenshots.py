@@ -42,57 +42,69 @@ def generate_login_screenshot():
     img.save(out_path)
     print("Saved:", out_path)
 
-# 2. Main Dashboard with Page Switching Options Explicitly on the Right Side
+# 2. Main Dashboard with Vertical Left Navigation Sidebar (Gmail / Canva / Byju's Style)
 def generate_dashboard_tab_screenshot():
-    img, draw = create_base_canvas(1100, 700)
+    img, draw = create_base_canvas(1200, 700)
     
-    # Top header banner
-    draw.rectangle([0, 0, 1100, 72], fill="#161B22", outline=None)
-    draw.line([0, 70, 1100, 70], fill="#FF6200", width=3)
+    # Left Navigation Sidebar Drawer
+    draw.rectangle([0, 0, 260, 700], fill="#161B22", outline="#21262D", width=1)
+    
+    # Sidebar Brand
+    draw.text((30, 30), "ZERO", fill="#E6EDF3")
+    draw.text((76, 30), "GUARD", fill="#FF6200")
+    draw.line([30, 60, 230, 60], fill="#21262D", width=1)
 
-    # Brand Title on Far Left ONLY
-    draw.text((30, 26), "ZERO", fill="#E6EDF3")
-    draw.text((76, 26), "GUARD", fill="#FF6200")
-
-    # Page Switching Navigation Links on the FAR RIGHT SIDE
+    # Vertical Sidebar Tabs list
     tabs = [
-        ("Overview", 380, True),
-        ("Spatial Risk Map", 470, False),
-        ("Incident Replay", 600, False),
-        ("Telemetry & Permits", 720, False),
-        ("Statutory Compliance", 860, False),
+        ("Overview", 100, True),
+        ("Spatial Risk Map", 150, False),
+        ("Incident Replay", 200, False),
+        ("Telemetry & Permits", 250, False),
+        ("Statutory Compliance", 300, False),
     ]
 
-    for label, xpos, is_active in tabs:
-        text_col = "#FF6200" if is_active else "#8B949E"
-        draw.text((xpos, 28), label, fill=text_col)
-        if is_active:
-            draw.line([xpos, 48, xpos + 60, 48], fill="#FF6200", width=2)
+    for label, ypos, is_active in tabs:
+        bg_col = "#FF6200" if is_active else "#161B22"
+        text_col = "#FFFFFF" if is_active else "#8B949E"
+        draw.rectangle([20, ypos, 240, ypos + 36], fill=bg_col, outline=None)
+        draw.text((40, ypos + 12), label, fill=text_col)
 
-    # Far Right CTA Button & Controls
-    draw.ellipse([1000, 18, 1080, 52], fill="#FF6200", outline="#FF6200")
-    draw.text((1015, 28), "Report", fill="#FFFFFF")
+    # Sidebar Bottom Profile
+    draw.line([30, 600, 230, 600], fill="#21262D", width=1)
+    draw.text((30, 620), "Operator: OP-REF-2026", fill="#E6EDF3")
+    draw.text((30, 640), "Substation: Zone E", fill="#8B949E")
 
-    # Overview Content
-    draw.rectangle([30, 140, 1070, 670], fill="#161B22", outline="#21262D", width=1)
-    draw.text((54, 164), "OVERALL REFINERY PLANT RISK OVERVIEW", fill="#E6EDF3")
+    # Right Content Area Top Header Bar
+    draw.rectangle([260, 0, 1200, 70], fill="#161B22", outline="#21262D", width=1)
+    draw.text((290, 26), "CONSOLE MODAL: OVERVIEW", fill="#E6EDF3")
+
+    # Header Controls (Scenario Dropdown & CTA)
+    draw.rectangle([800, 18, 980, 48], fill="#0D1117", outline="#21262D")
+    draw.text((820, 26), "SCEN-2026-0069", fill="#E6EDF3")
     
-    # Risk Indicators
-    draw.rectangle([54, 210, 320, 310], fill="#0D1117", outline="#21262D", width=1)
-    draw.text((74, 230), "PLANT RISK SCORE", fill="#8B949E")
-    draw.text((74, 260), "100.0 (CRITICAL)", fill="#F85149")
+    draw.rectangle([1000, 18, 1170, 48], fill="#FF6200", outline="#FF6200")
+    draw.text((1025, 26), "Emergency Report", fill="#FFFFFF")
 
-    draw.rectangle([340, 210, 606, 310], fill="#0D1117", outline="#21262D", width=1)
-    draw.text((360, 230), "SCADA FNR", fill="#8B949E")
-    draw.text((360, 260), "50.0% (5/10 Missed)", fill="#F85149")
+    # Overview Right Content Panel
+    draw.rectangle([290, 140, 1170, 670], fill="#161B22", outline="#21262D", width=1)
+    draw.text((314, 164), "OVERALL REFINERY PLANT RISK OVERVIEW", fill="#E6EDF3")
 
-    draw.rectangle([626, 210, 892, 310], fill="#0D1117", outline="#21262D", width=1)
-    draw.text((646, 230), "ZeroGuard FNR", fill="#8B949E")
-    draw.text((646, 260), "0.0% (0 Missed)", fill="#2EA043")
+    # Risk KPI Indicators
+    draw.rectangle([314, 210, 500, 310], fill="#0D1117", outline="#21262D", width=1)
+    draw.text((334, 230), "PLANT RISK SCORE", fill="#8B949E")
+    draw.text((334, 260), "100.0 (CRITICAL)", fill="#F85149")
 
-    draw.rectangle([912, 210, 1046, 310], fill="#0D1117", outline="#21262D", width=1)
-    draw.text((932, 230), "Early Warning Lead Time", fill="#8B949E")
-    draw.text((932, 260), "+18.0 min", fill="#58A6FF")
+    draw.rectangle([520, 210, 710, 310], fill="#0D1117", outline="#21262D", width=1)
+    draw.text((540, 230), "SCADA FNR", fill="#8B949E")
+    draw.text((540, 260), "50.0% (5/10 Missed)", fill="#F85149")
+
+    draw.rectangle([730, 210, 920, 310], fill="#0D1117", outline="#21262D", width=1)
+    draw.text((750, 230), "ZeroGuard FNR", fill="#8B949E")
+    draw.text((750, 260), "0.0% (0 Missed)", fill="#2EA043")
+
+    draw.rectangle([940, 210, 1146, 310], fill="#0D1117", outline="#21262D", width=1)
+    draw.text((960, 230), "Early Warning Lead Time", fill="#8B949E")
+    draw.text((960, 260), "+18.0 min", fill="#58A6FF")
 
     out_path = os.path.join(artifacts_dir, "overview_tab_dashboard.png")
     img.save(out_path)

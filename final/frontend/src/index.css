@@ -57,12 +57,12 @@ body {
 
 /* Premium Modal panel container */
 .zg-modal-panel {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  background-color: #161B22;
+  border: 1px solid #21262D;
   border-radius: 6px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
   padding: 24px;
-  animation: tabFadeScale var(--duration-slow) var(--ease-spring) forwards;
+  animation: tabFadeScale 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Thick Top Banner */

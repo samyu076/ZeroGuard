@@ -23,8 +23,8 @@ export default function AnomalyInjectorModal({ isOpen, onClose, sensors, onInjec
   };
 
   return (
-    <div className="fixed inset-0 bg-[#0D1117]/85 backdrop-blur-md z-50 flex items-center justify-center p-[16px]">
-      <div className="zg-modal-panel max-w-md w-full relative">
+    <div className="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-[16px]">
+      <div className="zg-modal-panel max-w-md w-full relative border border-[#21262D]">
         <button
           onClick={onClose}
           className="absolute right-[16px] top-[16px] text-[#8B949E] hover:text-[#E6EDF3] p-[4px]"
