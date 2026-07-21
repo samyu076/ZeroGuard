@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Activity, ShieldAlert, Cpu, FileText, Command, User, Settings, 
-  Layers, Clock, Sliders, LogIn, Lock, ArrowRight, UserCheck, Search 
+  Layers, Clock, Sliders, LogIn, Lock, ArrowRight, UserCheck, Search, LogOut
 } from 'lucide-react';
 import JudgeFacingMetricsStrip from './components/JudgeFacingMetricsStrip';
 import ZoneStatusStrip from './components/ZoneStatusStrip';
@@ -220,7 +220,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0D1117] text-[#E6EDF3] flex flex-col font-sans relative">
+    <div className="min-h-screen bg-[#0D1117] text-[#E6EDF3] flex font-sans relative">
       <div className="ambient-hero-bg" />
 
       <ToastNotification
@@ -228,83 +228,118 @@ export default function App() {
         onClose={() => setActiveToast(null)}
       />
 
-      {/* Top Header Banner matching Right-Aligned Navbar Reference Layout */}
-      <header className="thick-header-banner flex flex-wrap items-center justify-between px-[24px] py-[16px] gap-[16px]">
-        {/* Far Left: Brand Logo ONLY */}
-        <div className="flex items-center gap-[10px] shrink-0">
-          <div className="p-[6px] bg-[#FF6200]/10 border border-[#FF6200]/30 rounded-[6px]">
-            <ShieldAlert className="w-[22px] h-[22px] text-[#FF6200]" strokeWidth={1.5} />
+      {/* Gmail / Outlook / Canva / Byju's Style Vertical Left Sidebar Drawer */}
+      <aside className="w-[260px] bg-[#161B22] border-r border-[#21262D] flex flex-col justify-between p-[20px] shrink-0 sticky top-0 h-screen z-30">
+        {/* Top: Brand Logo & Vertical Page Switching Links */}
+        <div className="space-y-[24px]">
+          {/* Brand Mark */}
+          <div className="flex items-center gap-[10px] pb-[16px] border-b border-[#21262D]">
+            <div className="p-[6px] bg-[#FF6200]/10 border border-[#FF6200]/30 rounded-[6px]">
+              <ShieldAlert className="w-[22px] h-[22px] text-[#FF6200]" strokeWidth={1.5} />
+            </div>
+            <span className="font-bold text-[18px] tracking-[0.03em] text-[#E6EDF3] font-mono-tech uppercase">
+              ZERO<span className="text-[#FF6200]">GUARD</span>
+            </span>
           </div>
-          <span className="font-bold text-[20px] tracking-[0.03em] text-[#E6EDF3] font-mono-tech uppercase">
-            ZERO<span className="text-[#FF6200]">GUARD</span>
-          </span>
-        </div>
 
-        {/* Right Side Group: Page Switching Links + Action Controls */}
-        <div className="flex flex-wrap items-center justify-end gap-[24px] ml-auto">
-          {/* Page Switching Navigation Links (Right Side Layout) */}
-          <nav className="flex flex-wrap items-center gap-[16px] text-[13px] font-mono-tech font-semibold">
+          {/* Left Sidebar Vertical Page Navigation Links */}
+          <nav className="space-y-[6px]">
+            <span className="text-[10px] font-mono-tech text-[#8B949E] uppercase tracking-wider block px-[10px] mb-[8px]">
+              Console Navigation
+            </span>
+
             <button
               onClick={() => setActiveTab('dashboard')}
-              className={`transition-colors py-[6px] px-[4px] relative ${
-                activeTab === 'dashboard' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              className={`w-full flex items-center gap-[12px] px-[12px] py-[10px] rounded-[6px] text-[13px] font-mono-tech transition-all ${
+                activeTab === 'dashboard'
+                  ? 'bg-[#FF6200] text-[#FFFFFF] font-bold shadow-md shadow-[#FF6200]/20'
+                  : 'text-[#8B949E] hover:text-[#E6EDF3] hover:bg-[#1C2128]'
               }`}
             >
+              <Activity className="w-[16px] h-[16px]" strokeWidth={1.5} />
               Overview
-              {activeTab === 'dashboard' && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
-              )}
             </button>
+
             <button
               onClick={() => setActiveTab('spatial-map')}
-              className={`transition-colors py-[6px] px-[4px] relative ${
-                activeTab === 'spatial-map' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              className={`w-full flex items-center gap-[12px] px-[12px] py-[10px] rounded-[6px] text-[13px] font-mono-tech transition-all ${
+                activeTab === 'spatial-map'
+                  ? 'bg-[#FF6200] text-[#FFFFFF] font-bold shadow-md shadow-[#FF6200]/20'
+                  : 'text-[#8B949E] hover:text-[#E6EDF3] hover:bg-[#1C2128]'
               }`}
             >
+              <Layers className="w-[16px] h-[16px]" strokeWidth={1.5} />
               Spatial Risk Map
-              {activeTab === 'spatial-map' && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
-              )}
             </button>
+
             <button
               onClick={() => setActiveTab('replay')}
-              className={`transition-colors py-[6px] px-[4px] relative ${
-                activeTab === 'replay' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              className={`w-full flex items-center gap-[12px] px-[12px] py-[10px] rounded-[6px] text-[13px] font-mono-tech transition-all ${
+                activeTab === 'replay'
+                  ? 'bg-[#FF6200] text-[#FFFFFF] font-bold shadow-md shadow-[#FF6200]/20'
+                  : 'text-[#8B949E] hover:text-[#E6EDF3] hover:bg-[#1C2128]'
               }`}
             >
+              <Clock className="w-[16px] h-[16px]" strokeWidth={1.5} />
               Incident Replay
-              {activeTab === 'replay' && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
-              )}
             </button>
+
             <button
               onClick={() => setActiveTab('telemetry')}
-              className={`transition-colors py-[6px] px-[4px] relative ${
-                activeTab === 'telemetry' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              className={`w-full flex items-center gap-[12px] px-[12px] py-[10px] rounded-[6px] text-[13px] font-mono-tech transition-all ${
+                activeTab === 'telemetry'
+                  ? 'bg-[#FF6200] text-[#FFFFFF] font-bold shadow-md shadow-[#FF6200]/20'
+                  : 'text-[#8B949E] hover:text-[#E6EDF3] hover:bg-[#1C2128]'
               }`}
             >
+              <Sliders className="w-[16px] h-[16px]" strokeWidth={1.5} />
               Telemetry & Permits
-              {activeTab === 'telemetry' && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
-              )}
             </button>
+
             <button
               onClick={() => setActiveTab('statutory')}
-              className={`transition-colors py-[6px] px-[4px] relative ${
-                activeTab === 'statutory' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              className={`w-full flex items-center gap-[12px] px-[12px] py-[10px] rounded-[6px] text-[13px] font-mono-tech transition-all ${
+                activeTab === 'statutory'
+                  ? 'bg-[#FF6200] text-[#FFFFFF] font-bold shadow-md shadow-[#FF6200]/20'
+                  : 'text-[#8B949E] hover:text-[#E6EDF3] hover:bg-[#1C2128]'
               }`}
             >
+              <FileText className="w-[16px] h-[16px]" strokeWidth={1.5} />
               Statutory Compliance
-              {activeTab === 'statutory' && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
-              )}
             </button>
           </nav>
+        </div>
 
-          <div className="h-[18px] w-[1px] bg-[#21262D] hidden sm:block" />
+        {/* Bottom of Left Sidebar: Operator & Logout (Canva / Outlook style) */}
+        <div className="pt-[16px] border-t border-[#21262D] space-y-[12px]">
+          <div className="flex items-center gap-[10px] px-[8px]">
+            <User className="w-[18px] h-[18px] text-[#58A6FF]" />
+            <div>
+              <span className="text-[12px] font-bold text-[#E6EDF3] block">{operatorId}</span>
+              <span className="text-[10px] text-[#8B949E] block">{assignedZone}</span>
+            </div>
+          </div>
 
-          {/* Action Dropdown & Primary CTA Button */}
-          <div className="flex items-center gap-[10px] shrink-0">
+          <button
+            onClick={handleLogout}
+            className="w-full flex items-center justify-center gap-[8px] px-[12px] py-[8px] rounded-[4px] text-[12px] font-mono-tech text-[#F85149] bg-[#F85149]/10 hover:bg-[#F85149]/20 transition-all border border-[#F85149]/30"
+          >
+            <LogOut className="w-[14px] h-[14px]" /> Logout Session
+          </button>
+        </div>
+      </aside>
+
+      {/* Main Right Content Area */}
+      <div className="flex-1 flex flex-col min-w-0">
+        {/* Top Action Header Bar */}
+        <header className="bg-[#161B22] border-b border-[#21262D] px-[24px] py-[14px] flex flex-wrap items-center justify-between gap-[16px] sticky top-0 z-20">
+          <div className="flex items-center gap-[12px]">
+            <span className="text-[14px] font-bold text-[#E6EDF3] font-mono-tech uppercase">
+              CONSOLE MODAL: <span className="text-[#FF6200]">{activeTab.toUpperCase()}</span>
+            </span>
+          </div>
+
+          <div className="flex items-center gap-[12px]">
             {/* Scenario Selection Dropdown */}
             <div className="relative">
               <Search className="w-[14px] h-[14px] text-[#8B949E] absolute left-[10px] top-1/2 -translate-y-1/2" strokeWidth={1.5} />
@@ -312,7 +347,7 @@ export default function App() {
                 value={selectedScenarioId || ''}
                 onChange={(e) => handleSelectScenario(e.target.value)}
                 disabled={isOffline}
-                className="pl-[30px] pr-[16px] py-[6px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[11px] font-mono-tech text-[#E6EDF3] disabled:opacity-50 min-w-[170px]"
+                className="pl-[30px] pr-[16px] py-[6px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[11px] font-mono-tech text-[#E6EDF3] disabled:opacity-50 min-w-[200px]"
               >
                 <option value="" disabled>Select Scenario...</option>
                 {scenarios.map((s) => (
@@ -323,7 +358,6 @@ export default function App() {
               </select>
             </div>
 
-            {/* Command Palette Trigger ⌘K */}
             <button
               onClick={() => setIsCommandPaletteOpen(true)}
               className="btn-secondary py-[6px] px-[10px] flex items-center gap-[4px]"
@@ -333,7 +367,13 @@ export default function App() {
               <span className="font-mono-tech text-[11px] font-bold">⌘K</span>
             </button>
 
-            {/* Primary Action CTA Button */}
+            <button
+              onClick={() => setIsArchitectureOpen(true)}
+              className="btn-secondary py-[6px] px-[12px] text-[12px]"
+            >
+              Scalability
+            </button>
+
             <button
               onClick={() => setIsEmergencyOpen(true)}
               className="btn-primary rounded-full px-[16px] py-[7px] text-[11px] font-mono-tech flex items-center gap-[6px] shadow-lg shadow-[#FF6200]/20"
@@ -348,116 +388,112 @@ export default function App() {
             >
               <Settings className="w-[14px] h-[14px]" strokeWidth={1.5} />
             </button>
-
-            <button
-              onClick={handleLogout}
-              className="btn-secondary py-[6px] px-[10px] text-[#F85149] border-[#F85149]/30 hover:bg-[#F85149]/10 text-[11px]"
-              title="Close Session"
-            >
-              Logout
-            </button>
           </div>
-        </div>
-      </header>
+        </header>
 
-      {/* Persistent Judge-Facing Metrics Strip */}
-      <JudgeFacingMetricsStrip overallRiskLevel={graphState?.overall_risk_level} />
+        {/* Persistent Judge-Facing Metrics Strip */}
+        <JudgeFacingMetricsStrip overallRiskLevel={graphState?.overall_risk_level} />
 
-      {/* Persistent Plant Zone Risk Matrix Summary Strip */}
-      <ZoneStatusStrip nodes={graphState?.nodes || []} />
+        {/* Persistent Plant Zone Risk Matrix Summary Strip */}
+        <ZoneStatusStrip nodes={graphState?.nodes || []} />
 
-      {/* Main Workspace with Clean Tabbed Segregation */}
-      <main className="flex-1 px-[24px] py-[32px] max-w-7xl w-full mx-auto relative z-10">
-        {loading ? (
-          <div className="space-y-[24px]">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-[16px]">
-              <div className="h-[120px] animate-skeleton rounded-[6px]" />
-              <div className="h-[120px] animate-skeleton rounded-[6px]" />
-              <div className="h-[120px] animate-skeleton rounded-[6px]" />
-              <div className="h-[120px] animate-skeleton rounded-[6px]" />
+        {/* Main Content View with Smooth Tab Transitions */}
+        <main className="flex-1 px-[24px] py-[32px] max-w-7xl w-full mx-auto relative z-10">
+          {loading ? (
+            <div className="space-y-[24px]">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-[16px]">
+                <div className="h-[120px] animate-skeleton rounded-[6px]" />
+                <div className="h-[120px] animate-skeleton rounded-[6px]" />
+                <div className="h-[120px] animate-skeleton rounded-[6px]" />
+                <div className="h-[120px] animate-skeleton rounded-[6px]" />
+              </div>
+              <div className="h-[400px] animate-skeleton rounded-[6px]" />
             </div>
-            <div className="h-[400px] animate-skeleton rounded-[6px]" />
-          </div>
-        ) : (
-          <div className="tab-content-active">
-            {/* TAB 1: OVERVIEW */}
-            {activeTab === 'dashboard' && (
-              <div className="space-y-[24px]">
-                <RiskOverviewCards graphState={graphState} />
+          ) : (
+            <div className="tab-content-active">
+              {/* TAB 1: OVERVIEW */}
+              {activeTab === 'dashboard' && (
+                <div className="space-y-[24px]">
+                  <RiskOverviewCards graphState={graphState} />
 
-                {/* Compound Risk Fired Interlock Banner */}
-                {graphState?.active_alerts?.length > 0 && (
-                  <div className="p-[20px] rounded-[6px] bg-[#F85149]/10 border border-[#F85149]/40 flex flex-wrap items-center justify-between gap-[16px] font-mono-tech">
-                    <div>
-                      <span className="font-bold text-[#F85149] text-[14px] block uppercase tracking-[0.02em]">
-                        COMPOUND_CRITICAL — STATUTORY SAFETY INTERLOCK FIRED
-                      </span>
-                      <span className="text-[12px] text-[#E6EDF3] mt-[4px] block font-sans">
-                        {graphState.active_alerts[0].title}
-                      </span>
+                  {/* Compound Risk Fired Interlock Banner */}
+                  {graphState?.active_alerts?.length > 0 && (
+                    <div className="p-[20px] rounded-[6px] bg-[#F85149]/10 border border-[#F85149]/40 flex flex-wrap items-center justify-between gap-[16px] font-mono-tech">
+                      <div>
+                        <span className="font-bold text-[#F85149] text-[14px] block uppercase tracking-[0.02em]">
+                          COMPOUND_CRITICAL — STATUTORY SAFETY INTERLOCK FIRED
+                        </span>
+                        <span className="text-[12px] text-[#E6EDF3] mt-[4px] block font-sans">
+                          {graphState.active_alerts[0].title}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-[12px]">
+                        <button
+                          onClick={() => setIsEmergencyOpen(true)}
+                          className="btn-primary"
+                        >
+                          Auto-Generate Incident Report
+                        </button>
+                        <button
+                          onClick={() => setActiveAlertForExplainer(graphState.active_alerts[0])}
+                          className="btn-secondary"
+                        >
+                          View Causal Path
+                        </button>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-[12px]">
-                      <button
-                        onClick={() => setIsEmergencyOpen(true)}
-                        className="btn-primary"
-                      >
-                        Auto-Generate Incident Report
-                      </button>
-                      <button
-                        onClick={() => setActiveAlertForExplainer(graphState.active_alerts[0])}
-                        className="btn-secondary"
-                      >
-                        View Causal Path
-                      </button>
-                    </div>
-                  </div>
-                )}
+                  )}
 
-                {/* Baseline Comparison Summary Panel */}
-                <BaselineComparisonPanel />
-              </div>
-            )}
+                  {/* Baseline Comparison Summary Panel */}
+                  <BaselineComparisonPanel />
+                </div>
+              )}
 
-            {/* TAB 2: SPATIAL RISK MAP */}
-            {activeTab === 'spatial-map' && (
-              <div className="space-y-[24px]">
-                <GraphVisualizer
-                  graphState={graphState}
-                  onSelectAlert={(alert) => setActiveAlertForExplainer(alert)}
-                />
-              </div>
-            )}
+              {/* TAB 2: SPATIAL RISK MAP */}
+              {activeTab === 'spatial-map' && (
+                <div className="space-y-[24px]">
+                  <GraphVisualizer
+                    graphState={graphState}
+                    onSelectAlert={(alert) => setActiveAlertForExplainer(alert)}
+                  />
+                </div>
+              )}
 
-            {/* TAB 3: INCIDENT REPLAY & EXPLORER */}
-            {activeTab === 'replay' && (
-              <div className="space-y-[24px]">
-                <IncidentReplayPanel onScrollToAction={() => setActiveTab('telemetry')} />
-                <CounterfactualExplorerPanel />
-              </div>
-            )}
+              {/* TAB 3: INCIDENT REPLAY & EXPLORER */}
+              {activeTab === 'replay' && (
+                <div className="space-y-[24px]">
+                  <IncidentReplayPanel onScrollToAction={() => setActiveTab('telemetry')} />
+                  <CounterfactualExplorerPanel />
+                </div>
+              )}
 
-            {/* TAB 4: TELEMETRY & PERMITS */}
-            {activeTab === 'telemetry' && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-[16px]">
-                <SensorAnomalyTable
-                  nodes={graphState?.nodes}
-                  onInjectClick={() => setIsInjectorOpen(true)}
-                />
-                <PermitTimeline
-                  nodes={graphState?.nodes}
-                />
-              </div>
-            )}
+              {/* TAB 4: TELEMETRY & PERMITS */}
+              {activeTab === 'telemetry' && (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[16px]">
+                  <SensorAnomalyTable
+                    nodes={graphState?.nodes}
+                    onInjectClick={() => setIsInjectorOpen(true)}
+                  />
+                  <PermitTimeline
+                    nodes={graphState?.nodes}
+                  />
+                </div>
+              )}
 
-            {/* TAB 5: STATUTORY STANDARDS */}
-            {activeTab === 'statutory' && (
-              <div className="space-y-[24px]">
-                <ComplianceCitationPanel onTriggerToast={triggerToast} />
-              </div>
-            )}
-          </div>
-        )}
-      </main>
+              {/* TAB 5: STATUTORY STANDARDS */}
+              {activeTab === 'statutory' && (
+                <div className="space-y-[24px]">
+                  <ComplianceCitationPanel onTriggerToast={triggerToast} />
+                </div>
+              )}
+            </div>
+          )}
+        </main>
+
+        <footer className="border-t border-[#21262D] py-[16px] px-[24px] text-center text-[12px] font-mono-tech text-[#4A5568] bg-[#0D1117] relative z-10">
+          ZERO GUARD INDUSTRIAL RISK INTELLIGENCE v1.0.0 | SPATIO-TEMPORAL PAGERANK & RULE-GUARD ENGINE
+        </footer>
+      </div>
 
       {/* Modals */}
       <AnomalyInjectorModal
@@ -501,10 +537,6 @@ export default function App() {
         onClose={() => setIsSettingsOpen(false)}
         onSaveConfig={(cfg) => triggerToast({ title: 'ENGINE CONFIG SAVED', message: `Updated PageRank α=${cfg.alpha.toFixed(2)}, LEL Threshold Z=${cfg.lelThreshold.toFixed(1)}.` })}
       />
-
-      <footer className="border-t border-[#21262D] py-[16px] px-[24px] text-center text-[12px] font-mono-tech text-[#4A5568] bg-[#0D1117] relative z-10">
-        ZERO GUARD INDUSTRIAL RISK INTELLIGENCE v1.0.0 | SPATIO-TEMPORAL PAGERANK & RULE-GUARD ENGINE
-      </footer>
     </div>
   );
 }

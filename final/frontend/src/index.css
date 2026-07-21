@@ -23,8 +23,9 @@
   --accent-primary: #58A6FF;
   --accent-brand: #FF6200;
 
-  --font-mono: 'JetBrains Mono', 'Roboto Mono', 'IBM Plex Mono', monospace;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Font System Set to Comic Sans MS as Requested */
+  --font-mono: 'Comic Sans MS', 'Comic Sans', 'JetBrains Mono', cursive, monospace;
+  --font-sans: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
 
   /* Motion Tokens */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
@@ -59,7 +60,7 @@ body {
 .thick-header-banner {
   background-color: #161B22;
   border-bottom: 3px solid var(--accent-brand);
-  padding: 20px 24px;
+  padding: 16px 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
@@ -68,7 +69,7 @@ body {
 
 /* Navigation Tabs */
 .nav-tab-button {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-weight: 600;
   font-size: 13px;
   padding: 8px 18px;
@@ -161,7 +162,7 @@ body {
 .btn-primary {
   background-color: var(--accent-brand);
   color: #FFFFFF;
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-weight: 600;
   font-size: 13px;
   padding: 8px 18px;
@@ -179,7 +180,7 @@ body {
 .btn-secondary {
   background-color: transparent;
   color: var(--text-main);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 13px;
   padding: 8px 18px;

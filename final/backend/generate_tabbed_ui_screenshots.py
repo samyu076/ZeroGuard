@@ -42,7 +42,7 @@ def generate_login_screenshot():
     img.save(out_path)
     print("Saved:", out_path)
 
-# 2. Main Dashboard with Right-Aligned Navbar (PUFFIN Style)
+# 2. Main Dashboard with Page Switching Options Explicitly on the Right Side
 def generate_dashboard_tab_screenshot():
     img, draw = create_base_canvas(1100, 700)
     
@@ -50,17 +50,17 @@ def generate_dashboard_tab_screenshot():
     draw.rectangle([0, 0, 1100, 72], fill="#161B22", outline=None)
     draw.line([0, 70, 1100, 70], fill="#FF6200", width=3)
 
-    # Brand Title on Far Left
+    # Brand Title on Far Left ONLY
     draw.text((30, 26), "ZERO", fill="#E6EDF3")
     draw.text((76, 26), "GUARD", fill="#FF6200")
 
-    # Navigation Links on the Right Side (Puffin layout reference)
+    # Page Switching Navigation Links on the FAR RIGHT SIDE
     tabs = [
-        ("Overview", 420, True),
-        ("Spatial Risk Map", 510, False),
-        ("Incident Replay", 640, False),
-        ("Telemetry & Permits", 760, False),
-        ("Statutory Compliance", 900, False),
+        ("Overview", 380, True),
+        ("Spatial Risk Map", 470, False),
+        ("Incident Replay", 600, False),
+        ("Telemetry & Permits", 720, False),
+        ("Statutory Compliance", 860, False),
     ]
 
     for label, xpos, is_active in tabs:
@@ -69,9 +69,9 @@ def generate_dashboard_tab_screenshot():
         if is_active:
             draw.line([xpos, 48, xpos + 60, 48], fill="#FF6200", width=2)
 
-    # Rounded CTA Button on Far Right
-    draw.ellipse([1010, 18, 1080, 52], fill="#FF6200", outline="#FF6200")
-    draw.text((1025, 28), "Report", fill="#FFFFFF")
+    # Far Right CTA Button & Controls
+    draw.ellipse([1000, 18, 1080, 52], fill="#FF6200", outline="#FF6200")
+    draw.text((1015, 28), "Report", fill="#FFFFFF")
 
     # Overview Content
     draw.rectangle([30, 140, 1070, 670], fill="#161B22", outline="#21262D", width=1)
