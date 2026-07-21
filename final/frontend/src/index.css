@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
   --bg-main: #0D1117;
@@ -21,9 +23,8 @@
   --accent-primary: #58A6FF;
   --accent-brand: #FF6200;
 
-  /* High-legibility modern enterprise typography pairing */
+  --font-mono: 'JetBrains Mono', 'Roboto Mono', 'IBM Plex Mono', monospace;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
 
   /* Motion Tokens */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
@@ -49,28 +50,36 @@ body {
   min-height: 100vh;
 }
 
-/* Technical Telemetry class for data, percentages, and live metrics */
 .font-mono-tech {
   font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Premium Modal panel container */
+.zg-modal-panel {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  padding: 24px;
+  animation: tabFadeScale var(--duration-slow) var(--ease-spring) forwards;
 }
 
 /* Thick Top Banner */
 .thick-header-banner {
   background-color: #161B22;
   border-bottom: 3px solid var(--accent-brand);
-  padding: 16px 24px;
+  padding: 20px 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
   z-index: 40;
 }
 
-/* Navigation Tabs (Inter Medium) */
+/* Navigation Tabs */
 .nav-tab-button {
-  font-family: var(--font-sans);
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 13px;
   padding: 8px 18px;
   border-radius: 4px;
@@ -158,11 +167,11 @@ body {
   outline-offset: 2px !important;
 }
 
-/* General Button Classes (Inter SemiBold) */
+/* General Button Classes */
 .btn-primary {
   background-color: var(--accent-brand);
   color: #FFFFFF;
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-weight: 600;
   font-size: 13px;
   padding: 8px 18px;
@@ -180,7 +189,7 @@ body {
 .btn-secondary {
   background-color: transparent;
   color: var(--text-main);
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-weight: 500;
   font-size: 13px;
   padding: 8px 18px;
