@@ -1,0 +1,18 @@
+[
+  {
+    "document_id": "DOC-OISD-105-REV3",
+    "standard_name": "OISD-STD-105",
+    "title": "Work Permit System in Petroleum Industry",
+    "section_number": "Clause 6.2.1",
+    "matched_passage": "No hot work permit shall be issued unless gas testing confirms hydrocarbon concentration is zero percent of LEL. Positive blind isolation of process lines carrying hazardous gases or flammable vapors is mandatory prior to commencement of any flame, welding, or grinding operations.",
+    "applicability": ["HOT_WORK", "ZONE-PUMP-ROOM-2", "ZONE-HYDROCRACKER-1"]
+  },
+  {
+    "document_id": "DOC-OISD-118-REV2",
+    "standard_name": "OISD-STD-118",
+    "title": "Safe Handling of Hydrocarbons in Refineries",
+    "section_number": "Clause 5.4.2",
+    "matched_passage": "Isolation of process vessels for entry or maintenance must be achieved by physical disconnection or insertion of positive blinds rated for maximum operating pressure. Valve closure alone is prohibited as a means of isolation.",
+    "applicability": ["VESSEL_ENTRY", "ISOLATION"]
+  }
+]

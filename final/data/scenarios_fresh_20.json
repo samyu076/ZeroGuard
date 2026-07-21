@@ -1,0 +1,567 @@
+[
+  {
+    "scenario_id": "FRESH-2026-CC01",
+    "ground_truth_label": "COMPOUND_CRITICAL",
+    "zone_id": "Zone-B",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-F01",
+        "title": "Hot Work Welding Permit",
+        "permit_type": "HOT_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-B",
+        "isolation_status": "NONE",
+        "equipment_maintenance_active": true,
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 100.0,
+        "y": 150.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-F01",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-B",
+        "reading": 17.0,
+        "z_score": 3.4,
+        "x": 105.0,
+        "y": 152.0
+      },
+      {
+        "sensor_id": "SEN-VEN-F01",
+        "sensor_type": "AIR_FLOW",
+        "zone_id": "Zone-B",
+        "reading": 12.0,
+        "z_score": -2.4,
+        "x": 110.0,
+        "y": 155.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-CC02",
+    "ground_truth_label": "COMPOUND_CRITICAL",
+    "zone_id": "Zone-C",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-F02",
+        "title": "Hot Work Welding Permit",
+        "permit_type": "HOT_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-C",
+        "isolation_status": "NONE",
+        "equipment_maintenance_active": true,
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 100.0,
+        "y": 150.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-F02",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-C",
+        "reading": 19.0,
+        "z_score": 3.6,
+        "x": 105.0,
+        "y": 152.0
+      },
+      {
+        "sensor_id": "SEN-VEN-F02",
+        "sensor_type": "AIR_FLOW",
+        "zone_id": "Zone-C",
+        "reading": 12.0,
+        "z_score": -2.4,
+        "x": 110.0,
+        "y": 155.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-CC03",
+    "ground_truth_label": "COMPOUND_CRITICAL",
+    "zone_id": "Zone-D",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-F03",
+        "title": "Hot Work Welding Permit",
+        "permit_type": "HOT_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-D",
+        "isolation_status": "NONE",
+        "equipment_maintenance_active": true,
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 100.0,
+        "y": 150.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-F03",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-D",
+        "reading": 21.0,
+        "z_score": 3.8,
+        "x": 105.0,
+        "y": 152.0
+      },
+      {
+        "sensor_id": "SEN-VEN-F03",
+        "sensor_type": "AIR_FLOW",
+        "zone_id": "Zone-D",
+        "reading": 12.0,
+        "z_score": -2.4,
+        "x": 110.0,
+        "y": 155.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-CC04",
+    "ground_truth_label": "COMPOUND_CRITICAL",
+    "zone_id": "Zone-E",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-F04",
+        "title": "Hot Work Welding Permit",
+        "permit_type": "HOT_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-E",
+        "isolation_status": "NONE",
+        "equipment_maintenance_active": true,
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 100.0,
+        "y": 150.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-F04",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-E",
+        "reading": 23.0,
+        "z_score": 4.0,
+        "x": 105.0,
+        "y": 152.0
+      },
+      {
+        "sensor_id": "SEN-VEN-F04",
+        "sensor_type": "AIR_FLOW",
+        "zone_id": "Zone-E",
+        "reading": 12.0,
+        "z_score": -2.4,
+        "x": 110.0,
+        "y": 155.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-CC05",
+    "ground_truth_label": "COMPOUND_CRITICAL",
+    "zone_id": "Zone-A",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-F05",
+        "title": "Hot Work Welding Permit",
+        "permit_type": "HOT_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-A",
+        "isolation_status": "NONE",
+        "equipment_maintenance_active": true,
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 100.0,
+        "y": 150.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-F05",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-A",
+        "reading": 25.0,
+        "z_score": 4.2,
+        "x": 105.0,
+        "y": 152.0
+      },
+      {
+        "sensor_id": "SEN-VEN-F05",
+        "sensor_type": "AIR_FLOW",
+        "zone_id": "Zone-A",
+        "reading": 12.0,
+        "z_score": -2.4,
+        "x": 110.0,
+        "y": 155.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-TN01",
+    "ground_truth_label": "SAFE",
+    "zone_id": "Zone-B",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-FSAFE01",
+        "title": "Cold Routine Inspection Permit",
+        "permit_type": "COLD_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-B",
+        "isolation_status": "COMPLIANT",
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 200.0,
+        "y": 250.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FSAFE01",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-B",
+        "reading": 0.5,
+        "z_score": 0.15,
+        "x": 205.0,
+        "y": 252.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-TN02",
+    "ground_truth_label": "SAFE",
+    "zone_id": "Zone-C",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-FSAFE02",
+        "title": "Cold Routine Inspection Permit",
+        "permit_type": "COLD_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-C",
+        "isolation_status": "COMPLIANT",
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 200.0,
+        "y": 250.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FSAFE02",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-C",
+        "reading": 0.5,
+        "z_score": 0.2,
+        "x": 205.0,
+        "y": 252.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-TN03",
+    "ground_truth_label": "SAFE",
+    "zone_id": "Zone-D",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-FSAFE03",
+        "title": "Cold Routine Inspection Permit",
+        "permit_type": "COLD_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-D",
+        "isolation_status": "COMPLIANT",
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 200.0,
+        "y": 250.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FSAFE03",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-D",
+        "reading": 0.5,
+        "z_score": 0.25,
+        "x": 205.0,
+        "y": 252.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-TN04",
+    "ground_truth_label": "SAFE",
+    "zone_id": "Zone-E",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-FSAFE04",
+        "title": "Cold Routine Inspection Permit",
+        "permit_type": "COLD_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-E",
+        "isolation_status": "COMPLIANT",
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 200.0,
+        "y": 250.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FSAFE04",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-E",
+        "reading": 0.5,
+        "z_score": 0.3,
+        "x": 205.0,
+        "y": 252.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-TN05",
+    "ground_truth_label": "SAFE",
+    "zone_id": "Zone-A",
+    "permits": [
+      {
+        "permit_id": "PERMIT-2026-FSAFE05",
+        "title": "Cold Routine Inspection Permit",
+        "permit_type": "COLD_WORK",
+        "status": "ACTIVE",
+        "zone_id": "Zone-A",
+        "isolation_status": "COMPLIANT",
+        "start_time": "08:00",
+        "end_time": "17:00",
+        "x": 200.0,
+        "y": 250.0
+      }
+    ],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FSAFE05",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-A",
+        "reading": 0.5,
+        "z_score": 0.35,
+        "x": 205.0,
+        "y": 252.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WRN01",
+    "ground_truth_label": "WARNING",
+    "zone_id": "Zone-B",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-TEM-FWRN01",
+        "sensor_type": "TEMPERATURE",
+        "zone_id": "Zone-B",
+        "reading": 85.0,
+        "z_score": 2.4,
+        "x": 300.0,
+        "y": 350.0
+      },
+      {
+        "sensor_id": "SEN-VIB-FWRN01",
+        "sensor_type": "VIBRATION",
+        "zone_id": "Zone-B",
+        "reading": 7.5,
+        "z_score": 2.3,
+        "x": 305.0,
+        "y": 352.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WRN02",
+    "ground_truth_label": "WARNING",
+    "zone_id": "Zone-C",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-TEM-FWRN02",
+        "sensor_type": "TEMPERATURE",
+        "zone_id": "Zone-C",
+        "reading": 85.0,
+        "z_score": 2.5,
+        "x": 300.0,
+        "y": 350.0
+      },
+      {
+        "sensor_id": "SEN-VIB-FWRN02",
+        "sensor_type": "VIBRATION",
+        "zone_id": "Zone-C",
+        "reading": 7.5,
+        "z_score": 2.4,
+        "x": 305.0,
+        "y": 352.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WRN03",
+    "ground_truth_label": "WARNING",
+    "zone_id": "Zone-D",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-TEM-FWRN03",
+        "sensor_type": "TEMPERATURE",
+        "zone_id": "Zone-D",
+        "reading": 85.0,
+        "z_score": 2.6,
+        "x": 300.0,
+        "y": 350.0
+      },
+      {
+        "sensor_id": "SEN-VIB-FWRN03",
+        "sensor_type": "VIBRATION",
+        "zone_id": "Zone-D",
+        "reading": 7.5,
+        "z_score": 2.5,
+        "x": 305.0,
+        "y": 352.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WRN04",
+    "ground_truth_label": "WARNING",
+    "zone_id": "Zone-E",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-TEM-FWRN04",
+        "sensor_type": "TEMPERATURE",
+        "zone_id": "Zone-E",
+        "reading": 85.0,
+        "z_score": 2.7,
+        "x": 300.0,
+        "y": 350.0
+      },
+      {
+        "sensor_id": "SEN-VIB-FWRN04",
+        "sensor_type": "VIBRATION",
+        "zone_id": "Zone-E",
+        "reading": 7.5,
+        "z_score": 2.6,
+        "x": 305.0,
+        "y": 352.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WRN05",
+    "ground_truth_label": "WARNING",
+    "zone_id": "Zone-A",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-TEM-FWRN05",
+        "sensor_type": "TEMPERATURE",
+        "zone_id": "Zone-A",
+        "reading": 85.0,
+        "z_score": 2.8,
+        "x": 300.0,
+        "y": 350.0
+      },
+      {
+        "sensor_id": "SEN-VIB-FWRN05",
+        "sensor_type": "VIBRATION",
+        "zone_id": "Zone-A",
+        "reading": 7.5,
+        "z_score": 2.7,
+        "x": 305.0,
+        "y": 352.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WCH01",
+    "ground_truth_label": "WATCH",
+    "zone_id": "Zone-B",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FWCH01",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-B",
+        "reading": 4.2,
+        "z_score": 2.15,
+        "x": 400.0,
+        "y": 450.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WCH02",
+    "ground_truth_label": "WATCH",
+    "zone_id": "Zone-C",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FWCH02",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-C",
+        "reading": 4.2,
+        "z_score": 2.2,
+        "x": 400.0,
+        "y": 450.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WCH03",
+    "ground_truth_label": "WATCH",
+    "zone_id": "Zone-D",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FWCH03",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-D",
+        "reading": 4.2,
+        "z_score": 2.25,
+        "x": 400.0,
+        "y": 450.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WCH04",
+    "ground_truth_label": "WATCH",
+    "zone_id": "Zone-E",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FWCH04",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-E",
+        "reading": 4.2,
+        "z_score": 2.3,
+        "x": 400.0,
+        "y": 450.0
+      }
+    ]
+  },
+  {
+    "scenario_id": "FRESH-2026-WCH05",
+    "ground_truth_label": "WATCH",
+    "zone_id": "Zone-A",
+    "permits": [],
+    "sensors": [
+      {
+        "sensor_id": "SEN-LEL-FWCH05",
+        "sensor_type": "GAS_LEL",
+        "zone_id": "Zone-A",
+        "reading": 4.2,
+        "z_score": 2.35,
+        "x": 400.0,
+        "y": 450.0
+      }
+    ]
+  }
+]

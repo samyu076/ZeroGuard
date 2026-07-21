@@ -1,0 +1,64 @@
+[
+  {
+    "template_id": "TPL-HW-01",
+    "permit_type": "HOT_WORK",
+    "title": "Grinding and Torch Welding on Hydrocracker Return Header",
+    "required_precautions": [
+      "Continuous LEL Gas Monitoring",
+      "Positive Spectacle Blind Isolation of Fuel Line",
+      "Dedicated Fire Watch Standby"
+    ],
+    "isolation_status_compliant": "SPECTACLE_BLIND_INSERTED",
+    "isolation_status_non_compliant": "VALVE_CLOSED_ONLY",
+    "statutory_citation": "OISD-STD-105 Clause 6.2.1"
+  },
+  {
+    "template_id": "TPL-VE-01",
+    "permit_type": "VESSEL_ENTRY",
+    "title": "Internal Inspection of Hydrocracker Reaction Vessel V-101",
+    "required_precautions": [
+      "Physical Disconnection / Spectacle Blind Insertion",
+      "Continuous Oxygen & H2S Air Sampling",
+      "Standby Attendant with SCBA Gear"
+    ],
+    "isolation_status_compliant": "SPECTACLE_BLIND_INSERTED",
+    "isolation_status_non_compliant": "VALVE_CLOSED_ONLY",
+    "statutory_citation": "OISD-STD-118 Clause 5.4.2 & Factory Act 1948 Sec 36"
+  },
+  {
+    "template_id": "TPL-LB-01",
+    "permit_type": "LINE_BREAK",
+    "title": "Flange Spool Removal on Pressurized Hydrocarbon Line",
+    "required_precautions": [
+      "Depressurization and Line Draining",
+      "Nitrogen Purge Validation",
+      "Cold Work Cutting Tools Only"
+    ],
+    "isolation_status_compliant": "LINE_DEPRESSURIZED_BLINDED",
+    "isolation_status_non_compliant": "PRESSURIZED_VALVE_CLOSED",
+    "statutory_citation": "OISD-STD-105 Clause 7.1"
+  },
+  {
+    "template_id": "TPL-CW-01",
+    "permit_type": "COLD_WORK",
+    "title": "Structural Bolt Tightening and Pipe Support Painting",
+    "required_precautions": [
+      "Standard Safety Harness",
+      "Non-sparking Brass Hand Tools"
+    ],
+    "isolation_status_compliant": "NOT_REQUIRED",
+    "isolation_status_non_compliant": "NOT_REQUIRED",
+    "statutory_citation": "OISD-STD-105 Section 5.1"
+  },
+  {
+    "template_id": "TPL-IS-01",
+    "permit_type": "ISOLATION",
+    "title": "Mechanical Blind Insertion on Process Header Valve V-401",
+    "required_precautions": [
+      "Tagout Signage and Physical Padlock Lockout"
+    ],
+    "isolation_status_compliant": "SPECTACLE_BLIND_INSERTED",
+    "isolation_status_non_compliant": "UNLOCKED_NO_PADLOCK",
+    "statutory_citation": "OISD-STD-137 Section 4.2"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "dataset_name": "UCI Gas Sensor Array Drift Sample",
+  "description": "Multivariable gas sensor drift time series (Concentration ppm, Temp, Humidity, Sensors 1-16)",
+  "timesteps": [
+    {
+      "timestamp": "2026-07-21T08:00:00Z",
+      "sensor_id": "SEN-GAS-01",
+      "gas_type": "Ethanol/Methane",
+      "reading_ppm": 12.4,
+      "temperature_c": 28.5,
+      "humidity_pct": 55.0,
+      "raw_resistance_kohm": 45.2
+    },
+    {
+      "timestamp": "2026-07-21T08:00:02Z",
+      "sensor_id": "SEN-GAS-004",
+      "gas_type": "Flammable Hydrocarbon",
+      "reading_ppm": 88.5,
+      "temperature_c": 31.2,
+      "humidity_pct": 58.2,
+      "raw_resistance_kohm": 12.1
+    },
+    {
+      "timestamp": "2026-07-21T08:00:04Z",
+      "sensor_id": "SEN-GAS-004",
+      "gas_type": "Flammable Hydrocarbon",
+      "reading_ppm": 142.0,
+      "temperature_c": 34.0,
+      "humidity_pct": 60.1,
+      "raw_resistance_kohm": 8.4
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "facility_name": "ZeroGuard Hydrocarbon Refinery Plant #1",
+  "grid_unit": "meters",
+  "zones": [
+    {
+      "zone_id": "Zone-A-BoilerRoom",
+      "zone_name": "High-Pressure Steam Boiler & Furnace House",
+      "center_x": 45.0,
+      "center_y": 120.0,
+      "radius_meters": 30.0,
+      "hazard_level": "HIGH_THERMAL"
+    },
+    {
+      "zone_id": "Zone-B-PumpStation",
+      "zone_name": "Hydrocracker Hydrocarbon Feed Pump Station B",
+      "center_x": 110.0,
+      "center_y": 140.0,
+      "radius_meters": 25.0,
+      "hazard_level": "HIGH_FLAMMABLE"
+    },
+    {
+      "zone_id": "Zone-C-Storage",
+      "zone_name": "Bulk Slop Oil & Liquefied Gas Storage Farm",
+      "center_x": 220.0,
+      "center_y": 80.0,
+      "radius_meters": 50.0,
+      "hazard_level": "CRITICAL_EXPLOSIVE"
+    },
+    {
+      "zone_id": "Zone-D-Loading",
+      "zone_name": "Chemical Tanker Truck Unloading Rack",
+      "center_x": 180.0,
+      "center_y": 210.0,
+      "radius_meters": 35.0,
+      "hazard_level": "HIGH_TOXIC_FLAMMABLE"
+    },
+    {
+      "zone_id": "Zone-E-Control",
+      "zone_name": "Central Process Control Room & Switchgear",
+      "center_x": 50.0,
+      "center_y": 40.0,
+      "radius_meters": 20.0,
+      "hazard_level": "LOW"
+    }
+  ]
+}

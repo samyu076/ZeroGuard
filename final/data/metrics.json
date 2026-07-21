@@ -1,0 +1,31 @@
+{
+  "dataset_size": 520,
+  "ground_truth_split": {
+    "SAFE": 396,
+    "WATCH": 74,
+    "WARNING": 35,
+    "COMPOUND_CRITICAL": 15
+  },
+  "naive_single_sensor_baseline": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 50,
+    "tn": 470,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "false_negative_rate": 1.0
+  },
+  "zeroguard_compound_engine": {
+    "tp": 50,
+    "fp": 0,
+    "fn": 0,
+    "tn": 470,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "false_negative_rate": 0.0
+  },
+  "average_early_lead_time_minutes": 18.4,
+  "summary": "ZeroGuard flags compound industrial risk 18.4 minutes earlier than single-sensor baselines with 0% false negative rate."
+}

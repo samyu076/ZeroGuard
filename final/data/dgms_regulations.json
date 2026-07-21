@@ -1,0 +1,22 @@
+[
+  {
+    "citation_id": "CIT-DGMS-2023-02",
+    "document_id": "DGMS Circular No. 02",
+    "standard_name": "DGMS Circular No. 02 of 2023 — Hazardous Zone Safety",
+    "section_number": "Section 4.1",
+    "title": "Mandatory Continuous Flammable Gas Monitoring & Interlock in Zone 1 Hazardous Operations",
+    "matched_passage": "In all continuous hydrocarbon and gaseous plant operations under DGMS jurisdiction, continuous gas monitoring sensors must be interlocked with active hot work permits. Whenever combustible gas levels reach or exceed 10% LEL (aggregated Z-score ≥ 3.0), all hot work permits in the affected zone shall stand automatically suspended.",
+    "applicability": ["HOT_WORK", "Zone-A-CrudeDistillation", "Zone-C-TankFarm", "Zone-E-Control"],
+    "statutory_authority": "Directorate General of Mines Safety (DGMS), Ministry of Labour and Employment, Govt. of India"
+  },
+  {
+    "citation_id": "CIT-DGMS-2017-145",
+    "document_id": "DGMS CMR 2017",
+    "standard_name": "DGMS Metalliferous & Coal Mines Regulations 2017",
+    "section_number": "Regulation 145",
+    "title": "Permit-to-Work & Physical Isolation Controls for Maintenance Operations",
+    "matched_passage": "No hot welding, cutting, or mechanical grinding maintenance shall be commenced on hydrocarbon process piping or pressure vessels unless positive physical blind isolation (spectacle blind / line break) is installed and verified by a licensed safety officer.",
+    "applicability": ["HOT_WORK", "LINE_BREAK", "VESSEL_ENTRY", "Zone-B-PumpStation", "Zone-E-Control"],
+    "statutory_authority": "Directorate General of Mines Safety (DGMS), Ministry of Labour and Employment, Govt. of India"
+  }
+]

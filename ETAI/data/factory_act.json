@@ -1,0 +1,10 @@
+[
+  {
+    "document_id": "DOC-FACTORY-ACT-1948-SEC36",
+    "standard_name": "Factory Act 1948",
+    "title": "Precautions Against Dangerous Fumes and Ingress of Hydrocarbons",
+    "section_number": "Section 36",
+    "matched_passage": "No person shall be allowed or required to enter any chamber, tank, vat, pit, pipe, flue or other confined space in any factory in which gas, fume, vapour or dust is likely to be present to such an extent as to involve risk to persons being overcome thereby, unless it is provided with a manhole or other effective means of egress and positive physical isolation.",
+    "applicability": ["VESSEL_ENTRY", "HOT_WORK"]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "dataset_name": "NASA C-MAPSS Turbofan Engine Degradation Simulation",
+  "unit_id": 1,
+  "time_cycles": [
+    {
+      "cycle": 100,
+      "op_setting_1": 10.002,
+      "op_setting_2": 0.2501,
+      "op_setting_3": 100.0,
+      "sensors": {
+        "s2_total_temp_inlet": 642.35,
+        "s3_total_temp_outlet": 1589.60,
+        "s4_total_pressure": 1400.20,
+        "s11_static_pressure_compressor": 47.52,
+        "s12_ratio_fuel_flow": 521.80,
+        "s14_corrected_fan_speed": 8138.20
+      }
+    },
+    {
+      "cycle": 101,
+      "op_setting_1": 10.005,
+      "op_setting_2": 0.2503,
+      "op_setting_3": 100.0,
+      "sensors": {
+        "s2_total_temp_inlet": 648.10,
+        "s3_total_temp_outlet": 1605.40,
+        "s4_total_pressure": 1412.80,
+        "s11_static_pressure_compressor": 51.20,
+        "s12_ratio_fuel_flow": 535.10,
+        "s14_corrected_fan_speed": 8201.00
+      }
+    }
+  ]
+}
