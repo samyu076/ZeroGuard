@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Activity, ShieldAlert, Cpu, FileText, Command, User, Settings, 
-  Layers, Clock, Sliders, LogIn, Lock, ArrowRight, UserCheck 
+  Layers, Clock, Sliders, LogIn, Lock, ArrowRight, UserCheck, Search 
 } from 'lucide-react';
 import JudgeFacingMetricsStrip from './components/JudgeFacingMetricsStrip';
 import ZoneStatusStrip from './components/ZoneStatusStrip';
@@ -152,7 +152,6 @@ export default function App() {
     });
   };
 
-  // Sleek operator sign-in screen initially
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen bg-[#0D1117] flex items-center justify-center p-[24px] relative">
@@ -229,7 +228,7 @@ export default function App() {
         onClose={() => setActiveToast(null)}
       />
 
-      {/* C1: Google-style Premium Thick Header Banner */}
+      {/* Google-style Premium Thick Header Banner */}
       <header className="thick-header-banner flex flex-wrap items-center justify-between gap-[16px]">
         <div className="flex items-center gap-[16px]">
           <div className="flex items-center gap-[8px]">
@@ -276,7 +275,7 @@ export default function App() {
         </div>
 
         {/* Header Options */}
-        <div className="flex items-center gap-[12px]">
+        <div className="flex items-center gap-[10px]">
           {/* Command Palette Trigger */}
           <button
             onClick={() => setIsCommandPaletteOpen(true)}
@@ -286,6 +285,24 @@ export default function App() {
             <Command className="w-[14px] h-[14px] text-[#58A6FF]" strokeWidth={1.5} />
             <span className="font-mono-tech text-[12px] font-bold">⌘K</span>
           </button>
+
+          {/* Scenario Selection Dropdown */}
+          <div className="relative">
+            <Search className="w-[14px] h-[14px] text-[#8B949E] absolute left-[10px] top-1/2 -translate-y-1/2" strokeWidth={1.5} />
+            <select
+              value={selectedScenarioId || ''}
+              onChange={(e) => handleSelectScenario(e.target.value)}
+              disabled={isOffline}
+              className="pl-[30px] pr-[20px] py-[6px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[11px] font-mono-tech text-[#E6EDF3] disabled:opacity-50 min-w-[200px]"
+            >
+              <option value="" disabled>Select Scenario...</option>
+              {scenarios.map((s) => (
+                <option key={s.scenario_id} value={s.scenario_id}>
+                  {s.scenario_id} [{s.ground_truth_label || 'SCENARIO'}]
+                </option>
+              ))}
+            </select>
+          </div>
 
           <button
             onClick={() => setIsArchitectureOpen(true)}
@@ -319,7 +336,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* C5: Persistent Judge-Facing Metrics Strip */}
+      {/* Persistent Judge-Facing Metrics Strip */}
       <JudgeFacingMetricsStrip overallRiskLevel={graphState?.overall_risk_level} />
 
       {/* Persistent Plant Zone Risk Matrix Summary Strip */}
