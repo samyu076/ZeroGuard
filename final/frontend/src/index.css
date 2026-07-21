@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -23,9 +24,9 @@
   --accent-primary: #58A6FF;
   --accent-brand: #FF6200;
 
-  /* Font System Set to Comic Sans MS as Requested */
-  --font-mono: 'Comic Sans MS', 'Comic Sans', 'JetBrains Mono', cursive, monospace;
-  --font-sans: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+  /* High-Precision Enterprise Font System (Palantir / Datadog / Grafana Grade) */
+  --font-sans: 'Inter', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', 'Courier New', monospace;
 
   /* Motion Tokens */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
@@ -47,13 +48,15 @@ body {
   font-family: var(--font-sans);
   font-size: 14px;
   line-height: 1.5;
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
 
 .font-mono-tech {
   font-family: var(--font-mono);
-  font-feature-settings: "tnum" 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
 }
 
 /* Thick Top Banner */
@@ -70,7 +73,7 @@ body {
 /* Navigation Tabs */
 .nav-tab-button {
   font-family: var(--font-sans);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 13px;
   padding: 8px 18px;
   border-radius: 4px;
