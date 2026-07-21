@@ -228,111 +228,133 @@ export default function App() {
         onClose={() => setActiveToast(null)}
       />
 
-      {/* Google-style Premium Thick Header Banner */}
-      <header className="thick-header-banner flex flex-wrap items-center justify-between gap-[16px]">
-        <div className="flex items-center gap-[16px]">
-          <div className="flex items-center gap-[8px]">
-            <ShieldAlert className="w-[24px] h-[24px] text-[#FF6200]" strokeWidth={1.5} />
-            <span className="font-semibold text-[18px] tracking-[0.02em] text-[#E6EDF3] font-mono-tech uppercase">
-              ZERO<span className="text-[#FF6200]">GUARD</span>
-            </span>
+      {/* Top Header Banner matching Puffin Navbar Reference Layout */}
+      <header className="thick-header-banner flex items-center justify-between px-[32px] py-[16px]">
+        {/* Left: Brand Logo */}
+        <div className="flex items-center gap-[10px]">
+          <div className="p-[6px] bg-[#FF6200]/10 border border-[#FF6200]/30 rounded-[6px]">
+            <ShieldAlert className="w-[22px] h-[22px] text-[#FF6200]" strokeWidth={1.5} />
           </div>
-          <div className="h-[20px] w-[1px] bg-[#21262D] hidden sm:block" />
-          
-          {/* Navigation Selection Tabs */}
-          <nav className="flex items-center gap-[6px]">
+          <span className="font-bold text-[20px] tracking-[0.03em] text-[#E6EDF3] font-mono-tech uppercase">
+            ZERO<span className="text-[#FF6200]">GUARD</span>
+          </span>
+        </div>
+
+        {/* Right Side Group: Right-Aligned Navigation Links + Action CTA */}
+        <div className="flex items-center gap-[32px]">
+          {/* Navigation Links (Right Side Layout) */}
+          <nav className="hidden lg:flex items-center gap-[20px] text-[13px] font-mono-tech font-semibold">
             <button
               onClick={() => setActiveTab('dashboard')}
-              className={`nav-tab-button ${activeTab === 'dashboard' ? 'active' : ''}`}
+              className={`transition-colors py-[6px] px-[4px] relative ${
+                activeTab === 'dashboard' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              }`}
             >
               Overview
+              {activeTab === 'dashboard' && (
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
+              )}
             </button>
             <button
               onClick={() => setActiveTab('spatial-map')}
-              className={`nav-tab-button ${activeTab === 'spatial-map' ? 'active' : ''}`}
+              className={`transition-colors py-[6px] px-[4px] relative ${
+                activeTab === 'spatial-map' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              }`}
             >
               Spatial Risk Map
+              {activeTab === 'spatial-map' && (
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
+              )}
             </button>
             <button
               onClick={() => setActiveTab('replay')}
-              className={`nav-tab-button ${activeTab === 'replay' ? 'active' : ''}`}
+              className={`transition-colors py-[6px] px-[4px] relative ${
+                activeTab === 'replay' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              }`}
             >
               Incident Replay
+              {activeTab === 'replay' && (
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
+              )}
             </button>
             <button
               onClick={() => setActiveTab('telemetry')}
-              className={`nav-tab-button ${activeTab === 'telemetry' ? 'active' : ''}`}
+              className={`transition-colors py-[6px] px-[4px] relative ${
+                activeTab === 'telemetry' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              }`}
             >
               Telemetry & Permits
+              {activeTab === 'telemetry' && (
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
+              )}
             </button>
             <button
               onClick={() => setActiveTab('statutory')}
-              className={`nav-tab-button ${activeTab === 'statutory' ? 'active' : ''}`}
+              className={`transition-colors py-[6px] px-[4px] relative ${
+                activeTab === 'statutory' ? 'text-[#FF6200] font-bold' : 'text-[#8B949E] hover:text-[#E6EDF3]'
+              }`}
             >
               Statutory Compliance
+              {activeTab === 'statutory' && (
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF6200] rounded-full" />
+              )}
             </button>
           </nav>
-        </div>
 
-        {/* Header Options */}
-        <div className="flex items-center gap-[10px]">
-          {/* Command Palette Trigger */}
-          <button
-            onClick={() => setIsCommandPaletteOpen(true)}
-            className="btn-secondary py-[6px] px-[12px] flex items-center gap-[6px]"
-            title="Open Command Palette (⌘K)"
-          >
-            <Command className="w-[14px] h-[14px] text-[#58A6FF]" strokeWidth={1.5} />
-            <span className="font-mono-tech text-[12px] font-bold">⌘K</span>
-          </button>
+          {/* Action Dropdown & Primary CTA Button */}
+          <div className="flex items-center gap-[12px]">
+            {/* Scenario Selection Dropdown */}
+            <div className="relative hidden md:block">
+              <Search className="w-[14px] h-[14px] text-[#8B949E] absolute left-[10px] top-1/2 -translate-y-1/2" strokeWidth={1.5} />
+              <select
+                value={selectedScenarioId || ''}
+                onChange={(e) => handleSelectScenario(e.target.value)}
+                disabled={isOffline}
+                className="pl-[30px] pr-[16px] py-[6px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[11px] font-mono-tech text-[#E6EDF3] disabled:opacity-50 min-w-[180px]"
+              >
+                <option value="" disabled>Select Scenario...</option>
+                {scenarios.map((s) => (
+                  <option key={s.scenario_id} value={s.scenario_id}>
+                    {s.scenario_id} [{s.ground_truth_label || 'SCENARIO'}]
+                  </option>
+                ))}
+              </select>
+            </div>
 
-          {/* Scenario Selection Dropdown */}
-          <div className="relative">
-            <Search className="w-[14px] h-[14px] text-[#8B949E] absolute left-[10px] top-1/2 -translate-y-1/2" strokeWidth={1.5} />
-            <select
-              value={selectedScenarioId || ''}
-              onChange={(e) => handleSelectScenario(e.target.value)}
-              disabled={isOffline}
-              className="pl-[30px] pr-[20px] py-[6px] bg-[#0D1117] border border-[#21262D] rounded-[4px] text-[11px] font-mono-tech text-[#E6EDF3] disabled:opacity-50 min-w-[200px]"
+            {/* Command Palette Trigger ⌘K */}
+            <button
+              onClick={() => setIsCommandPaletteOpen(true)}
+              className="btn-secondary py-[6px] px-[10px] flex items-center gap-[4px]"
+              title="Open Command Palette (⌘K)"
             >
-              <option value="" disabled>Select Scenario...</option>
-              {scenarios.map((s) => (
-                <option key={s.scenario_id} value={s.scenario_id}>
-                  {s.scenario_id} [{s.ground_truth_label || 'SCENARIO'}]
-                </option>
-              ))}
-            </select>
+              <Command className="w-[13px] h-[13px] text-[#58A6FF]" strokeWidth={1.5} />
+              <span className="font-mono-tech text-[11px] font-bold">⌘K</span>
+            </button>
+
+            {/* Primary Action CTA Button (Rounded like Get a Quote) */}
+            <button
+              onClick={() => setIsEmergencyOpen(true)}
+              className="btn-primary rounded-full px-[18px] py-[8px] text-[12px] font-mono-tech flex items-center gap-[6px] shadow-lg shadow-[#FF6200]/20"
+            >
+              <FileText className="w-[14px] h-[14px]" strokeWidth={1.5} /> Emergency Report
+            </button>
+
+            <button
+              onClick={() => setIsSettingsOpen(true)}
+              className="btn-secondary py-[6px] px-[8px]"
+              title="Engine Settings"
+            >
+              <Settings className="w-[14px] h-[14px]" strokeWidth={1.5} />
+            </button>
+
+            <button
+              onClick={handleLogout}
+              className="btn-secondary py-[6px] px-[10px] text-[#F85149] border-[#F85149]/30 hover:bg-[#F85149]/10"
+              title="Close Session"
+            >
+              Logout
+            </button>
           </div>
-
-          <button
-            onClick={() => setIsArchitectureOpen(true)}
-            className="btn-secondary py-[6px] px-[12px] text-[12px]"
-          >
-            Scalability
-          </button>
-
-          <button
-            onClick={() => setIsEmergencyOpen(true)}
-            className="btn-secondary py-[6px] px-[12px] text-[12px] text-[#F85149] border-[#F85149]/40 hover:bg-[#F85149]/10"
-          >
-            Emergency Report
-          </button>
-
-          <button
-            onClick={() => setIsSettingsOpen(true)}
-            className="btn-secondary py-[6px] px-[8px]"
-            title="Engine Settings"
-          >
-            <Settings className="w-[14px] h-[14px]" strokeWidth={1.5} />
-          </button>
-
-          <button
-            onClick={handleLogout}
-            className="btn-secondary py-[6px] px-[10px] text-[#F85149] border-[#F85149]/30 hover:bg-[#F85149]/10"
-            title="Close Session"
-          >
-            Logout
-          </button>
         </div>
       </header>
 
