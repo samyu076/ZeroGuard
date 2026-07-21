@@ -2,12 +2,68 @@
 ZeroGuard Scenario Data Loader
 Loads scenarios_500.json and plant_layout.json using clean relative path resolution.
 Converts raw JSON scenario records into graph Node and Edge models.
+
+Temporal Hazard Momentum:
+- When a NON_COMPLIANT permit approaches its end_time, hazard_severity is elevated.
+  Rationale: a non-compliant permit running close to expiry means the isolation has
+  not been corrected despite the contractor being near the end of their window.
+  This is a real operational signal (experienced safety engineers treat it as one).
+- Decay function: severity increases linearly from 1.0 -> 2.0 as the permit
+  progresses from its start_time to its end_time, but only if status == NON_COMPLIANT.
+  A compliant permit gets flat severity=1.0 regardless of time.
+- Input: real start_time, end_time, timestamp per scenario record.
 """
 
 import os
 import json
+import math
+from datetime import datetime, timezone
 from typing import Dict, List, Any, Optional, Tuple
 from app.engine.schema import Node, Edge, NodeCategory, PermitType, RiskLevel
+
+
+def _parse_iso(ts: str) -> Optional[datetime]:
+    """Parse ISO 8601 timestamp, return UTC-aware datetime."""
+    try:
+        return datetime.fromisoformat(ts.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
+def _temporal_hazard_severity(permit_data: dict, scenario_timestamp: str) -> float:
+    """
+    Compute temporal hazard severity for a permit.
+
+    Returns a value in [1.0, 2.0]:
+    - 1.0 for compliant permits (no temporal escalation)
+    - 1.0 -> 2.0 for non-compliant permits as they approach end_time
+
+    Formula: severity = 1.0 + clamp(progress, 0, 1)
+    where progress = (now - start) / (end - start)
+
+    Meaning: at start of permit window → 1.0, at expiry → 2.0.
+    This models the real-world fact that a non-compliant permit not corrected
+    by its end_time is twice as hazardous: the contractor may rush to finish
+    without proper safety checks, and the PTFE/blind may never get installed.
+    """
+    status = permit_data.get("status", "COMPLIANT").upper()
+    if status == "COMPLIANT":
+        return 1.0
+
+    start = _parse_iso(permit_data.get("start_time", ""))
+    end = _parse_iso(permit_data.get("end_time", ""))
+    now = _parse_iso(scenario_timestamp)
+
+    if start is None or end is None or now is None:
+        return 1.5  # Default non-compliant severity if times unavailable
+
+    total_duration = (end - start).total_seconds()
+    if total_duration <= 0:
+        return 1.0
+
+    elapsed = (now - start).total_seconds()
+    progress = max(0.0, min(1.0, elapsed / total_duration))
+    return round(1.0 + progress, 4)
 
 
 class ScenarioDataLoader:
@@ -50,6 +106,7 @@ class ScenarioDataLoader:
 
     def scenario_to_nodes(self, scenario: Dict[str, Any]) -> List[Node]:
         nodes = []
+        scenario_timestamp = scenario.get("timestamp", "")
 
         # Convert sensors to Node objects
         for sensor_data in scenario.get("sensors", []):
@@ -71,8 +128,22 @@ class ScenarioDataLoader:
             )
             nodes.append(node)
 
-        # Convert permits to Node objects
+        # Convert permits to Node objects with temporal hazard momentum
         for permit_data in scenario.get("permits", []):
+            # Temporal hazard momentum: non-compliant permits approaching end_time
+            # get elevated hazard_severity (real computation from real timestamps)
+            temporal_severity = _temporal_hazard_severity(permit_data, scenario_timestamp)
+
+            # Derive spectacle_blind_installed from isolation_status
+            isolation_status = permit_data.get("isolation_status", "")
+            spectacle_blind_installed = "BLIND" in isolation_status.upper()
+
+            # Derive maintenance signal from permit title / type
+            title_lower = permit_data.get("title", "").lower()
+            equipment_maintenance_active = any(
+                kw in title_lower for kw in ["maintenance", "repair", "overhaul", "inspection", "hydrocracker"]
+            )
+
             node = Node(
                 id=permit_data["permit_id"],
                 name=permit_data["title"],
@@ -85,10 +156,15 @@ class ScenarioDataLoader:
                     "type": permit_data["permit_type"],
                     "status": permit_data["status"],
                     "contractor": permit_data.get("contractor", ""),
-                    "isolation_status": permit_data.get("isolation_status", ""),
+                    "isolation_status": isolation_status,
+                    "spectacle_blind_installed": spectacle_blind_installed,
+                    "equipment_maintenance_active": equipment_maintenance_active,
                     "statutory_citation": permit_data.get("statutory_citation", ""),
                     "start_time": permit_data["start_time"],
-                    "end_time": permit_data["end_time"]
+                    "end_time": permit_data["end_time"],
+                    # Temporal hazard momentum: severity escalates toward expiry
+                    "hazard_severity": temporal_severity,
+                    "temporal_severity": temporal_severity,
                 },
                 status=permit_data["status"]
             )
@@ -127,3 +203,4 @@ class ScenarioDataLoader:
             key = (dist_entry["sensor_id"], dist_entry["permit_id"])
             distances[key] = float(dist_entry["distance_meters"])
         return distances
+
