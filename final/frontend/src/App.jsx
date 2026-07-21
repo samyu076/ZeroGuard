@@ -3,6 +3,9 @@ import {
   Activity, ShieldAlert, Cpu, FileText, Command, User, Settings, 
   Layers, Clock, Sliders, LogIn, Lock, ArrowRight, UserCheck, Search, LogOut
 } from 'lucide-react';
+import ScadaModbusPanel from './components/ScadaModbusPanel';
+import EsdDispatchPanel from './components/EsdDispatchPanel';
+import RagUploaderPanel from './components/RagUploaderPanel';
 import JudgeFacingMetricsStrip from './components/JudgeFacingMetricsStrip';
 import ZoneStatusStrip from './components/ZoneStatusStrip';
 import RiskOverviewCards from './components/RiskOverviewCards';
@@ -444,6 +447,9 @@ export default function App() {
                     </div>
                   )}
 
+                  {/* Active ESD Dispatch Panel */}
+                  <EsdDispatchPanel graphState={graphState} onTriggerToast={triggerToast} />
+
                   {/* Baseline Comparison Summary Panel */}
                   <BaselineComparisonPanel />
                 </div>
@@ -469,14 +475,17 @@ export default function App() {
 
               {/* TAB 4: TELEMETRY & PERMITS */}
               {activeTab === 'telemetry' && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[16px]">
-                  <SensorAnomalyTable
-                    nodes={graphState?.nodes}
-                    onInjectClick={() => setIsInjectorOpen(true)}
-                  />
-                  <PermitTimeline
-                    nodes={graphState?.nodes}
-                  />
+                <div className="space-y-[24px]">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-[16px]">
+                    <SensorAnomalyTable
+                      nodes={graphState?.nodes}
+                      onInjectClick={() => setIsInjectorOpen(true)}
+                    />
+                    <PermitTimeline
+                      nodes={graphState?.nodes}
+                    />
+                  </div>
+                  <ScadaModbusPanel />
                 </div>
               )}
 
@@ -484,6 +493,7 @@ export default function App() {
               {activeTab === 'statutory' && (
                 <div className="space-y-[24px]">
                   <ComplianceCitationPanel onTriggerToast={triggerToast} />
+                  <RagUploaderPanel onTriggerToast={triggerToast} />
                 </div>
               )}
             </div>
