@@ -189,8 +189,12 @@ class AlertSystem:
                 triggered_nodes=rule_guard_result[2]
             )
 
+            import hashlib
+            alert_sig = f"RULE-{rule_guard_result[0]}-{'-'.join(rule_guard_result[2])}-{now_str[:13]}" # Hour-level deduplication
+            det_id = "ALT-" + hashlib.md5(alert_sig.encode()).hexdigest()[:12]
+
             alert = Alert(
-                alert_id=str(uuid.uuid4()),
+                alert_id=det_id,
                 title=f"Rule-Guard Alert: {rule_guard_result[0]}",
                 triggered_by=triggered_by,
                 risk_level=risk_level,
@@ -210,8 +214,12 @@ class AlertSystem:
             contributing_node_ids = {nid: w for nid, w in contributing_weights.get(propagation_primary_node, [])}
             risk_score = max(0.0, min(propagation_risk_score, 100.0))
 
+            import hashlib
+            alert_sig = f"PROP-{propagation_risk_level.value}-{propagation_primary_node}-{now_str[:13]}"
+            det_id = "ALT-" + hashlib.md5(alert_sig.encode()).hexdigest()[:12]
+
             alert = Alert(
-                alert_id=str(uuid.uuid4()),
+                alert_id=det_id,
                 title=f"Propagation Alert: {propagation_risk_level.value} Risk Detected",
                 triggered_by=TriggeredBy.PROPAGATION,
                 risk_level=propagation_risk_level,

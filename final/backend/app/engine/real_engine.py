@@ -25,6 +25,7 @@ class RealGraphEngine:
         # Default scenario to load: SCEN-2026-0069 (COMPOUND_CRITICAL)
         self.current_scenario_id: str = "SCEN-2026-0069"
         self._injected_anomalies: Dict[str, float] = {}
+        self._offline_sensors = set()
 
     def load_scenario(self, scenario_id: str) -> Optional[RiskGraph]:
         scenario = self.data_loader.get_scenario_by_id(scenario_id)
@@ -32,6 +33,7 @@ class RealGraphEngine:
             return None
         self.current_scenario_id = scenario_id
         self._injected_anomalies.clear()
+        self._offline_sensors.clear()
         return self.get_current_graph_state()
 
     def get_current_graph_state(self) -> RiskGraph:
@@ -69,8 +71,22 @@ class RealGraphEngine:
                 else:
                     node.status = "NORMAL"
 
+        expected_node_ids = {n.id for n in nodes if n.category == NodeCategory.SENSOR}
+        active_nodes = [n for n in nodes if n.id not in self._offline_sensors]
+
+        from app.services.audit_ledger import append_to_ledger
+        
         # Evaluate live alerts via AlertSystem
-        alerts = self.alert_system.evaluate(nodes=nodes, sensor_permit_distances=distances)
+        alerts = self.alert_system.evaluate(nodes=active_nodes, sensor_permit_distances=distances, expected_node_ids=expected_node_ids)
+
+        # Log new alerts
+        if not hasattr(self, '_logged_alerts'):
+            self._logged_alerts = set()
+            
+        for alert in alerts:
+            if alert.alert_id not in self._logged_alerts:
+                self._logged_alerts.add(alert.alert_id)
+                append_to_ledger(alert.dict())
 
         # Compute overall risk score and level
         max_score = 0.0
@@ -97,7 +113,7 @@ class RealGraphEngine:
         now_str = datetime.utcnow().isoformat() + "Z"
 
         return RiskGraph(
-            nodes=nodes,
+            nodes=active_nodes,
             edges=edges,
             overall_risk_score=round(max_score, 2),
             overall_risk_level=overall_level,
@@ -109,6 +125,13 @@ class RealGraphEngine:
 
     def inject_sensor_anomaly(self, request: AnomalyInjectionRequest) -> RiskGraph:
         self._injected_anomalies[request.sensor_id] = request.target_z_score
+        return self.get_current_graph_state()
+        
+    def set_sensor_status(self, sensor_id: str, offline: bool) -> RiskGraph:
+        if offline:
+            self._offline_sensors.add(sensor_id)
+        else:
+            self._offline_sensors.discard(sensor_id)
         return self.get_current_graph_state()
 
     def resimulate_scenario(self, request: SimulationRequest) -> RiskGraph:

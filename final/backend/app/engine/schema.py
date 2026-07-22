@@ -128,6 +128,11 @@ class SimulationRequest(BaseModel):
     resimulate_duration: int = 120
 
 
+class SensorStatusRequest(BaseModel):
+    sensor_id: str
+    offline: bool
+
+
 class ComplianceCheckRequest(BaseModel):
     zone_id: Optional[str] = None
     permit_type: Optional[PermitType] = None

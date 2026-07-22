@@ -1,0 +1,2732 @@
+[
+  {
+    "timestamp": "2026-07-22T02:00:31.998256Z",
+    "hash": "efef69dcb2975a6c047dbdd0abc00387c2685acd82e6e2880c00c85ccd87cbef",
+    "payload": {
+      "alert_id": "ALT-1d4c84ca1dfb",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0440 co-located with Flammable Gas Sensor SEN-LEL-681 (Z=4.86, distance=2.0m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 10.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0440",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0440 co-located with Flammable Gas Sensor SEN-LEL-681 (Z=4.86, distance=2.0m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0440",
+          "SEN-LEL-681"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-0440": 0.27486299294891203,
+        "Zone-E-Control": 0.24708618309767563,
+        "SEN-VIB-683": 2.0403823825677072e-76,
+        "SEN-VIB-682": 3.0155639932726022e-80
+      },
+      "timestamp": "2026-07-22T02:00:31.998256Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.623982Z",
+    "hash": "9e314212775a24bf32afa78294c93bbf326a61cfd07f55102fe54800658d399f",
+    "payload": {
+      "alert_id": "ALT-f1e1b3b19aeb",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 50.092128279823065,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-LEL-051",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-B-PumpStation": 0.2797906373589748,
+        "PERMIT-2026-0125": 0.2608919870189837,
+        "SEN-VIB-052": 4.459361791444081e-25
+      },
+      "timestamp": "2026-07-22T02:04:48.623982Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.654402Z",
+    "hash": "d7838666c7fb0aab9e97b22f5466057f8cea372a0a8eaa3ca9b49d1336a7f2fc",
+    "payload": {
+      "alert_id": "ALT-bd21ebd04f8d",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 48.231461705140894,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-C-Storage",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-LEL-131": 0.1826204125237889,
+        "SEN-H2S-133": 0.0531935451848818,
+        "SEN-LEL-132": 0.048945021758477765
+      },
+      "timestamp": "2026-07-22T02:04:48.654402Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.678898Z",
+    "hash": "61fa99ae89c254d109950b5b763bbcdc93055b48a98aaf20744a015b742c75b2",
+    "payload": {
+      "alert_id": "ALT-8a2d5b57c120",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 33.088753416449215,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-251",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.4594592537960811,
+        "SEN-VIB-252": 6.532696239911033e-37
+      },
+      "timestamp": "2026-07-22T02:04:48.677859Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.704402Z",
+    "hash": "eaa6558625c2e09b9bbd0b266ab59267429b6f5608a7d4393ea87a300422fbe7",
+    "payload": {
+      "alert_id": "ALT-f131a923ceba",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.787961664168854,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-292",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-291": 0.3106983990382344,
+        "PERMIT-2026-0245": 0.20983081180404042,
+        "Zone-C-Storage": 0.16189482321667675,
+        "SEN-LEL-293": 1.2076621195060817e-06,
+        "SEN-H2S-294": 8.800323208515406e-38
+      },
+      "timestamp": "2026-07-22T02:04:48.704402Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.740330Z",
+    "hash": "cc9b1a4409f03ab279220033f855265bed402d31907ffcc2225aa464c1687f3b",
+    "payload": {
+      "alert_id": "ALT-8de793d9f959",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.17790099860291,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-391",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-392": 0.29785579975831833,
+        "PERMIT-2026-0295": 0.21557224032479744,
+        "Zone-C-Storage": 0.16567241977957634,
+        "SEN-VIB-393": 2.023096129495383e-25,
+        "SEN-TEM-394": 1.403477836886298e-48
+      },
+      "timestamp": "2026-07-22T02:04:48.737716Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.775479Z",
+    "hash": "7732e05291e29ba0c2c213d163f0998847a2ac05fa39b8fbb067e0eb3d37a7c2",
+    "payload": {
+      "alert_id": "ALT-838db88cf853",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 49.33494926026554,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-H2S-441",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-E-Control": 0.2961011156546846,
+        "PERMIT-2026-0320": 0.2502848375427058,
+        "SEN-PRE-442": 5.378364744658174e-37
+      },
+      "timestamp": "2026-07-22T02:04:48.775479Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.813630Z",
+    "hash": "e94a3e761c9b78de4188a80fbed89d5bc903ad7a75cbf0bc0a2d7ec9c999e162",
+    "payload": {
+      "alert_id": "ALT-df72dd335137",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 48.20433297169913,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-481",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-482": 0.30470896582351814,
+        "PERMIT-2026-0340": 0.19989898626325434,
+        "Zone-D-Loading": 0.16710785773081885,
+        "SEN-H2S-484": 1.6583920469055156e-18,
+        "SEN-PRE-483": 7.578640612393945e-20
+      },
+      "timestamp": "2026-07-22T02:04:48.813630Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.837858Z",
+    "hash": "70c1c1258489bedf0977016f9f499dd1a83befcf1a855f5491d3d058f02d1223",
+    "payload": {
+      "alert_id": "ALT-5ea16115d27a",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 40.9424440093472,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-591",
+      "affected_zones": [
+        "Zone-B-PumpStation",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-592": 0.3088952394367625,
+        "PERMIT-2026-0395": 0.21016435786908597,
+        "Zone-A-BoilerRoom": 0.1617880840391761,
+        "SEN-PRE-593": 1.5198249081197623e-07
+      },
+      "timestamp": "2026-07-22T02:04:48.837858Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.856882Z",
+    "hash": "596e061e8cd692050ae585bcaeb93e0f74f6e6197cff19c9b1901974e9a947c0",
+    "payload": {
+      "alert_id": "ALT-be7cd7fda3af",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 42.25155407818765,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-601",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-602": 0.30890693117031454,
+        "PERMIT-2026-0400": 0.19821248948098927,
+        "Zone-C-Storage": 0.16735871217495982,
+        "SEN-TEM-603": 1.8302014376286425e-26
+      },
+      "timestamp": "2026-07-22T02:04:48.856882Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.880518Z",
+    "hash": "191356a0ad133f8a7be228e569c30f9396c70023a455e5938ad0fce5bfd6f06c",
+    "payload": {
+      "alert_id": "ALT-1d4c84ca1dfb",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0440 co-located with Flammable Gas Sensor SEN-LEL-681 (Z=4.86, distance=2.0m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0440",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0440 co-located with Flammable Gas Sensor SEN-LEL-681 (Z=4.86, distance=2.0m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0440",
+          "SEN-LEL-681"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-0440": 0.27486299294891203,
+        "Zone-E-Control": 0.24708618309767563,
+        "SEN-VIB-683": 2.0403823825677072e-76,
+        "SEN-VIB-682": 3.0155639932726022e-80
+      },
+      "timestamp": "2026-07-22T02:04:48.880518Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.909877Z",
+    "hash": "da73573ca43e72ec9e2f76f2166c751295f3740122265da2227056e7f9d8471f",
+    "payload": {
+      "alert_id": "ALT-c79f26d12ba8",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 28.74923764891101,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-751",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.4594592537960347,
+        "SEN-TEM-752": 2.2440537926533726e-14
+      },
+      "timestamp": "2026-07-22T02:04:48.909877Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.932553Z",
+    "hash": "cf338d8e0e2bdf992d9904646cd9bb925e48bfb9df18e165efcafa1ebf19c214",
+    "payload": {
+      "alert_id": "ALT-79148e7aa964",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0480 co-located with Flammable Gas Sensor SEN-LEL-761 (Z=4.40, distance=9.4m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0480",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage",
+        "Zone-D-Loading",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0480 co-located with Flammable Gas Sensor SEN-LEL-761 (Z=4.40, distance=9.4m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0480",
+          "SEN-LEL-761"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.2811414489427239,
+        "PERMIT-2026-0480": 0.2579353037236429,
+        "SEN-VIB-765": 2.2333631604903e-11,
+        "SEN-VIB-762": 2.6083672160766904e-35,
+        "SEN-PRE-764": 1.116067439364463e-38,
+        "SEN-LEL-763": 1.04766763541448e-51
+      },
+      "timestamp": "2026-07-22T02:04:48.932553Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.956935Z",
+    "hash": "c9d7dea8def2b56f02420770e9493e1364c05d770bf1bdb7590ded189cbf7900",
+    "payload": {
+      "alert_id": "ALT-3bb1759114e8",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 54.98503271672605,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-771",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-772": 0.3022511085346012,
+        "PERMIT-2026-0485": 0.18201336204716026,
+        "Zone-B-PumpStation": 0.1695918571205311,
+        "SEN-TEM-774": 0.02060757312728913,
+        "SEN-TEM-775": 6.758298777994247e-09,
+        "SEN-LEL-773": 4.988299867890757e-26
+      },
+      "timestamp": "2026-07-22T02:04:48.956935Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:48.981555Z",
+    "hash": "79c8180ebf9ccc7709c8af5de1136e9d2547eb895dad099f2b50d540ef15fa01",
+    "payload": {
+      "alert_id": "ALT-dd270954f8e0",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0535 co-located with Flammable Gas Sensor SEN-LEL-871 (Z=4.29, distance=12.9m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0535",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0535 co-located with Flammable Gas Sensor SEN-LEL-871 (Z=4.29, distance=12.9m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0535",
+          "SEN-LEL-871"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-B-PumpStation": 0.23641966627466562,
+        "PERMIT-2026-0535": 0.1964613538171218,
+        "SEN-VIB-874": 0.08380632851211754,
+        "SEN-PRE-872": 0.05523312287364517,
+        "SEN-TEM-873": 3.7857820847516415e-14
+      },
+      "timestamp": "2026-07-22T02:04:48.981555Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.016177Z",
+    "hash": "c9f3039b0e5fb744bbf2b344692aaa6d91c5fab6e66523b4e16dc3fc05dc98fd",
+    "payload": {
+      "alert_id": "ALT-75225cd23e1b",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 52.31763958472955,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-982",
+      "affected_zones": [
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-981": 0.2472393296455323,
+        "PERMIT-2026-0590": 0.16092906552850153,
+        "SEN-H2S-983": 0.13122134173367928,
+        "Zone-B-PumpStation": 0.11163011393238713,
+        "SEN-PRE-984": 0.09815478485842773,
+        "SEN-H2S-985": 0.00021933290451996257
+      },
+      "timestamp": "2026-07-22T02:04:49.016177Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.035484Z",
+    "hash": "ea8d42cb6f099ff7a6d2888714dd9e1b6ebbdcabe8cd26fd77c21d6719ecb2e9",
+    "payload": {
+      "alert_id": "ALT-01171b0e46dd",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 57.21691391789421,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-PRE-991",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-B-PumpStation": 0.3125722401930472,
+        "SEN-LEL-993": 0.1954284286508726,
+        "SEN-TEM-992": 2.544959158377717e-06,
+        "SEN-TEM-994": 7.243556377569304e-09
+      },
+      "timestamp": "2026-07-22T02:04:49.035484Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.059124Z",
+    "hash": "9aadb71d2f7e4a1d8004100cdde1c748803965105038ce0d7dab6610b92528e5",
+    "payload": {
+      "alert_id": "ALT-0175a3d8315d",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 67.82780265949667,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-1001",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-C-Storage": 0.29101001910467394,
+        "SEN-VIB-1005": 0.20267367861558708,
+        "SEN-LEL-1004": 0.01873219130041891,
+        "SEN-VIB-1003": 1.5888468570802704e-44,
+        "SEN-H2S-1002": 6.160996841305035e-45
+      },
+      "timestamp": "2026-07-22T02:04:49.059124Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.093577Z",
+    "hash": "bece628243b0eb34ff4670920549bc1db7638980af6bce379f673fea3e914906",
+    "payload": {
+      "alert_id": "ALT-7b2c5b192b84",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 77.82537136037365,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-PRE-1011",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-E-Control": 0.22637584376771658,
+        "PERMIT-2026-0605": 0.1274478661024946,
+        "SEN-TEM-1013": 0.11476610236525842,
+        "SEN-TEM-1015": 0.1132191216837626,
+        "SEN-PRE-1012": 1.6339068767657273e-54,
+        "SEN-H2S-1014": 4.408784062179312e-80
+      },
+      "timestamp": "2026-07-22T02:04:49.093577Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.114262Z",
+    "hash": "11328eeea142234000e472fd648d128e2a9b05444625b34388dfc3e4c12266a3",
+    "payload": {
+      "alert_id": "ALT-054c23cfe8b5",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 64.90653672244807,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-1021",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-C-Storage": 0.2852546297948582,
+        "PERMIT-2026-0610": 0.2476340602707156,
+        "SEN-H2S-1022": 9.159504386994493e-22,
+        "SEN-PRE-1024": 6.85270928461278e-22,
+        "SEN-PRE-1023": 2.630556859412316e-22,
+        "SEN-TEM-1025": 5.138343080561524e-32
+      },
+      "timestamp": "2026-07-22T02:04:49.114262Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.143711Z",
+    "hash": "c5efc85db13a30fc175c12ccc2ce32e920ee362d25711a0431d53914aa7ec24e",
+    "payload": {
+      "alert_id": "ALT-b8359226f9c8",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 59.766452021874386,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-1111",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-1112": 0.2913974311902288,
+        "Zone-E-Control": 0.2031577852543277,
+        "PERMIT-2026-0655": 0.14897996930227395,
+        "SEN-PRE-1114": 5.225660993728986e-24,
+        "SEN-TEM-1115": 4.950176505070239e-35,
+        "SEN-LEL-1113": 1.21092603045157e-44,
+        "SEN-H2S-1116": 1.745461530166111e-61
+      },
+      "timestamp": "2026-07-22T02:04:49.143711Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.164792Z",
+    "hash": "eb905d263d24b3a26422ecfe0450d060f8d146b22d8bb0600e433d9b9126095f",
+    "payload": {
+      "alert_id": "ALT-af5d6c05568a",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 40.8440014148411,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-1152",
+      "affected_zones": [
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-1151": 0.3078715484607165,
+        "PERMIT-2026-0675": 0.21274620056527108,
+        "Zone-B-PumpStation": 0.1639606630141785
+      },
+      "timestamp": "2026-07-22T02:04:49.164792Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.194016Z",
+    "hash": "ba8c753eb371072c5eed1b7a0bc6131189f9f7c84fa4372a4703c412aa40e358",
+    "payload": {
+      "alert_id": "ALT-19d72e3ea004",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.91183495465782,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-C-Storage",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-1231": 0.1978137902539398,
+        "PERMIT-2026-0715": 0.09263264415948169,
+        "SEN-PRE-1232": 0.011052481222929416
+      },
+      "timestamp": "2026-07-22T02:04:49.194016Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.224711Z",
+    "hash": "0c3e03b0b306ba2f1be866d05fc6eac6d9920f4e2fcd6641876e550217426a7e",
+    "payload": {
+      "alert_id": "ALT-8ac3e7a979db",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 80.96668092590112,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-LEL-1251",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-B-PumpStation": 0.22295204560064533,
+        "SEN-PRE-1256": 0.1434412299886739,
+        "SEN-TEM-1254": 0.1314327609318684,
+        "SEN-TEM-1253": 0.05752339217357112,
+        "SEN-PRE-1255": 2.929261804081819e-20,
+        "SEN-H2S-1252": 5.209746172753363e-31
+      },
+      "timestamp": "2026-07-22T02:04:49.224711Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.254112Z",
+    "hash": "2121ab83fa54958f080cfff9c8fedfd0fbe0df34fb60d1fff9c28aa62789bbd2",
+    "payload": {
+      "alert_id": "ALT-18a557bf6bf7",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 59.85635513062167,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-1261",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-1262": 0.26486029425840985,
+        "PERMIT-2026-0730": 0.17243244362984966,
+        "Zone-E-Control": 0.15870542763015538,
+        "SEN-PRE-1265": 0.08991399744048789,
+        "SEN-PRE-1266": 2.101382724228014e-16,
+        "SEN-LEL-1263": 1.0936952068961069e-60,
+        "SEN-H2S-1264": 7.129287788070268e-61
+      },
+      "timestamp": "2026-07-22T02:04:49.254112Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.287817Z",
+    "hash": "fffaddad96e7b353422ccbeedddc84222e290e226190ca0784f1eabcc8634ace",
+    "payload": {
+      "alert_id": "ALT-b1281139df89",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0770 co-located with Flammable Gas Sensor SEN-LEL-1341 (Z=4.61, distance=10.4m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0770",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage",
+        "Zone-D-Loading",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0770 co-located with Flammable Gas Sensor SEN-LEL-1341 (Z=4.61, distance=10.4m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0770",
+          "SEN-LEL-1341"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-C-Storage": 0.2922889052477678,
+        "PERMIT-2026-0770": 0.24832687152907024,
+        "SEN-PRE-1345": 2.765692922107336e-31,
+        "SEN-VIB-1344": 3.4155967902935226e-33,
+        "SEN-H2S-1342": 3.645489850387912e-41,
+        "SEN-VIB-1343": 1.5144394576152336e-45,
+        "SEN-VIB-1346": 9.005144617721166e-52
+      },
+      "timestamp": "2026-07-22T02:04:49.285358Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.320659Z",
+    "hash": "7b034fbd83ab437f8219fcb80b2819fdeb290a4670c127696bd26814cb15dbc3",
+    "payload": {
+      "alert_id": "ALT-9773e1c2d858",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 38.42462155163621,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-1532",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-1531": 0.3028839656103381,
+        "PERMIT-2026-0865": 0.21157771255462238,
+        "Zone-B-PumpStation": 0.1709367913979333,
+        "SEN-PRE-1533": 1.1344642140993796e-13
+      },
+      "timestamp": "2026-07-22T02:04:49.320659Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.346536Z",
+    "hash": "294f725174cb3af7166990d6fa135a7c412dff7dfe5e3f04b1c93f34ed63fe2d",
+    "payload": {
+      "alert_id": "ALT-1ca02cab029a",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 47.273153432874935,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-1582",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-1581": 0.279103141995012,
+        "PERMIT-2026-0890": 0.18556274753962682,
+        "Zone-C-Storage": 0.15864220737675963,
+        "SEN-TEM-1583": 0.07693376546616446,
+        "SEN-H2S-1584": 1.4836831399573296e-55
+      },
+      "timestamp": "2026-07-22T02:04:49.346536Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.375720Z",
+    "hash": "ab45a71fa5024484e66d1438bab8768370fce81233ddfd59811fe8a91b06acbf",
+    "payload": {
+      "alert_id": "ALT-76d0949d4dec",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 60.40775123149786,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-1591",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-E-Control": 0.3090025558537231,
+        "SEN-TEM-1592": 0.2069541799906828,
+        "SEN-H2S-1593": 1.4613441800414978e-11,
+        "SEN-TEM-1594": 1.7873635780464564e-46,
+        "SEN-VIB-1595": 1.0154050706172574e-52
+      },
+      "timestamp": "2026-07-22T02:04:49.375720Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.401664Z",
+    "hash": "2fafd3e84e1b86dc86400af0291dbd1e67ae491a058639d87ab0c8046b7824d1",
+    "payload": {
+      "alert_id": "ALT-62421d6d7601",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 39.636555061745796,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-1671",
+      "affected_zones": [
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-1672": 0.306904949188387,
+        "PERMIT-2026-0935": 0.21631532824739533,
+        "Zone-C-Storage": 0.16564107147919863
+      },
+      "timestamp": "2026-07-22T02:04:49.401664Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.439573Z",
+    "hash": "f7057745c60c3460677514e600c8031ee4f13e5e96bec43b01b652e7ab140905",
+    "payload": {
+      "alert_id": "ALT-8cd9c5bb5b6c",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 41.62254288843492,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-1681",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-1682": 0.29511663366524665,
+        "PERMIT-2026-0940": 0.19705876501764927,
+        "Zone-C-Storage": 0.1799160146317704,
+        "SEN-H2S-1683": 2.70648483502345e-21
+      },
+      "timestamp": "2026-07-22T02:04:49.439573Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.472989Z",
+    "hash": "3f5a792429d928f6d9e95faf472221b9173aed2652e01ea00971d4a3b363ba64",
+    "payload": {
+      "alert_id": "ALT-784f4a83fa01",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0945 co-located with Flammable Gas Sensor SEN-LEL-1691 (Z=4.92, distance=8.2m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0945",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0945 co-located with Flammable Gas Sensor SEN-LEL-1691 (Z=4.92, distance=8.2m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0945",
+          "SEN-LEL-1691"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-0945": 0.28246338779513325,
+        "Zone-D-Loading": 0.27060866033037323,
+        "SEN-H2S-1692": 2.5587180052120814e-82,
+        "SEN-TEM-1693": 3.070786474074897e-87
+      },
+      "timestamp": "2026-07-22T02:04:49.472989Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.499667Z",
+    "hash": "865f6799a1cec9c66b7a74eabec5a26c4c8e290c87aa651219909826679e3873",
+    "payload": {
+      "alert_id": "ALT-418f6c909b38",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.0887044999131,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-1731",
+      "affected_zones": [
+        "Zone-E-Control"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-1732": 0.2910038489021141,
+        "PERMIT-2026-0965": 0.1941474238360989,
+        "Zone-E-Control": 0.16760984514230554,
+        "SEN-TEM-1733": 0.018848357940524568
+      },
+      "timestamp": "2026-07-22T02:04:49.499667Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.541066Z",
+    "hash": "cc8743a5782e748a20eb7afe73bbd2b4b08548c0d1a58eb0f4b811527d685e13",
+    "payload": {
+      "alert_id": "ALT-377e6837d402",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 42.06640068477769,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-H2S-1761",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-C-Storage": 0.45827983774711034,
+        "SEN-VIB-1763": 9.806289948242377e-41,
+        "SEN-LEL-1762": 5.417896022963486e-41
+      },
+      "timestamp": "2026-07-22T02:04:49.541066Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.571630Z",
+    "hash": "98419ab0b49ca433b53e542dcf8b2fa55a922bab3ae2c3343f437eb893bbae52",
+    "payload": {
+      "alert_id": "ALT-5252d700e1f1",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 68.85314481490543,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-B-PumpStation",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-E-Control",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-H2S-1801": 0.17822561177258395,
+        "PERMIT-2026-1000": 0.11809105175524456,
+        "SEN-LEL-1803": 0.03282558919606773,
+        "SEN-TEM-1804": 0.013890901990162118,
+        "SEN-PRE-1805": 0.010625257395075636,
+        "SEN-VIB-1802": 0.0038197422106927047,
+        "SEN-TEM-1806": 0.002566951784463529
+      },
+      "timestamp": "2026-07-22T02:04:49.571630Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.600206Z",
+    "hash": "608922bf1a17f3adee30918a927dbe7521a3de2ac8216722cd4e7b92990144a8",
+    "payload": {
+      "alert_id": "ALT-0279c2847047",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 47.746331763035926,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-D-Loading",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-LEL-1841": 0.1937052677165067,
+        "SEN-H2S-1842": 0.04392094905510749,
+        "SEN-H2S-1843": 0.03264394862203936
+      },
+      "timestamp": "2026-07-22T02:04:49.600206Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.626322Z",
+    "hash": "aaa7f7c44c3bd39df897f8f24afdeec4c7f48344f1ed16bbd3eb851fa279009d",
+    "payload": {
+      "alert_id": "ALT-39cea11706d4",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 43.8942045760379,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-1871",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-A-BoilerRoom": 0.36534513244843003,
+        "PERMIT-2026-1035": 0.13946186470370706,
+        "SEN-VIB-1872": 1.7864978945383784e-28
+      },
+      "timestamp": "2026-07-22T02:04:49.626322Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.652438Z",
+    "hash": "ed012703720b12c1b1a7d9d2c6b93ac66319f2a7c97370843dbd788c817abd1c",
+    "payload": {
+      "alert_id": "ALT-0c5db180dfeb",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 58.816468005192114,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-1941",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-E-Control",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-1942": 0.2785368123090155,
+        "Zone-E-Control": 0.16378788676254719,
+        "PERMIT-2026-1070": 0.14162866515341938,
+        "SEN-VIB-1945": 0.1084742851875263,
+        "SEN-H2S-1946": 2.7414499938894444e-06,
+        "SEN-PRE-1944": 5.60928655724208e-12,
+        "SEN-LEL-1943": 8.848196042984128e-23
+      },
+      "timestamp": "2026-07-22T02:04:49.652438Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.691538Z",
+    "hash": "5bc5c4ace93636af385b57b225142d1c617beffa32534a74f08a7d65cf116821",
+    "payload": {
+      "alert_id": "ALT-d2e464ce0cbe",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 62.81335183679771,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-PRE-1961",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-E-Control": 0.29564859487332723,
+        "PERMIT-2026-1080": 0.20339009338840314,
+        "SEN-TEM-1964": 0.05364937072545888,
+        "SEN-LEL-1962": 5.34130173268346e-56,
+        "SEN-PRE-1963": 3.025918342539284e-63
+      },
+      "timestamp": "2026-07-22T02:04:49.689315Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.718858Z",
+    "hash": "01982d77c5785ca718c0b9fe96897a129bf2f889aa2f485cd5d2c45b9c3de5df",
+    "payload": {
+      "alert_id": "ALT-d28359706321",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.82828168988979,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-1991",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-A-BoilerRoom": 0.45945966554108353,
+        "SEN-PRE-1992": 4.077166189332356e-40,
+        "SEN-H2S-1993": 0.0
+      },
+      "timestamp": "2026-07-22T02:04:49.718858Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.743636Z",
+    "hash": "aa7ff0edf6df316c0e778e4df1ff4fd1cfbacb476de13073ff400d13f0de9ba1",
+    "payload": {
+      "alert_id": "ALT-ae9ec9f60ddb",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 54.42200562662946,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-2002",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-2001": 0.2834199640539634,
+        "PERMIT-2026-1100": 0.1724726096087697,
+        "Zone-E-Control": 0.15882257665071123,
+        "SEN-VIB-2005": 0.07298987221118755,
+        "SEN-VIB-2003": 0.011656988683691333,
+        "SEN-TEM-2004": 7.491926097205666e-48
+      },
+      "timestamp": "2026-07-22T02:04:49.743636Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.771951Z",
+    "hash": "721368bea33cd1be75689119505000831f6230c039105001ffe6e381325e0132",
+    "payload": {
+      "alert_id": "ALT-32233adaefe5",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 47.09788684253585,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-H2S-2011",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "PERMIT-2026-1105": 0.2961683683789733,
+        "Zone-E-Control": 0.26383680666047216,
+        "SEN-TEM-2012": 2.8366318231577027e-10
+      },
+      "timestamp": "2026-07-22T02:04:49.771951Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.795788Z",
+    "hash": "924302a92fb844b00a172a8a06c024f98b8078dfebe20289bad382952f2bdbfa",
+    "payload": {
+      "alert_id": "ALT-7e1e87c2db14",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1170 co-located with Flammable Gas Sensor SEN-LEL-2141 (Z=4.37, distance=6.8m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-1170",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1170 co-located with Flammable Gas Sensor SEN-LEL-2141 (Z=4.37, distance=6.8m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-1170",
+          "SEN-LEL-2141"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-1170": 0.23173016948548647,
+        "Zone-E-Control": 0.1947662839839258,
+        "SEN-LEL-2143": 0.188424309378794,
+        "SEN-TEM-2142": 3.5623156431250468e-62
+      },
+      "timestamp": "2026-07-22T02:04:49.795788Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.820282Z",
+    "hash": "5fe8e6096d48def82f73b9c20ee66bc44cccfe60a91a15359384e20d68274327",
+    "payload": {
+      "alert_id": "ALT-3e71e01b4303",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 48.29112305550667,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-D-Loading",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-2181": 0.17382755052264237,
+        "SEN-PRE-2183": 0.06341350654654254,
+        "SEN-PRE-2182": 0.06103426988159119
+      },
+      "timestamp": "2026-07-22T02:04:49.820282Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.860358Z",
+    "hash": "724812dc8b00bc0e27fbd1cd842c14446fdf5a6746c311a22ec13302c4b3254a",
+    "payload": {
+      "alert_id": "ALT-965d9ee0d5c9",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.10669806982204,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-2202",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-2201": 0.2809963340452214,
+        "PERMIT-2026-1200": 0.1969390466430824,
+        "Zone-C-Storage": 0.17998807265392308,
+        "SEN-PRE-2203": 5.2010170062550124e-52,
+        "SEN-LEL-2204": 9.539589224140615e-54
+      },
+      "timestamp": "2026-07-22T02:04:49.860358Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.896170Z",
+    "hash": "bac0e041056551d0e25b32ffc32f5896c1e7735d0bde0308fa31d89c0ff725a8",
+    "payload": {
+      "alert_id": "ALT-e1c3e9063723",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 50.81857441858837,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-2211",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-2212": 0.29582368424673167,
+        "PERMIT-2026-1205": 0.19973394926240345,
+        "Zone-E-Control": 0.17326150291886205,
+        "SEN-PRE-2215": 0.01886952863536645,
+        "SEN-VIB-2213": 1.0402206178617884e-15,
+        "SEN-VIB-2214": 7.421902555294666e-37
+      },
+      "timestamp": "2026-07-22T02:04:49.896170Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.936783Z",
+    "hash": "7f81eb895f4370fadbfd9bd9e711450a295432604da7b7fdebac3d26635b2343",
+    "payload": {
+      "alert_id": "ALT-c0750e1c045b",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 60.48365920229948,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-LEL-2241",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-E-Control": 0.2946897792255978,
+        "SEN-VIB-2242": 0.2056055053998415,
+        "SEN-PRE-2244": 2.4133844006834674e-07,
+        "SEN-VIB-2243": 6.971534433136946e-08
+      },
+      "timestamp": "2026-07-22T02:04:49.936783Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:49.989050Z",
+    "hash": "3400eec46c03d44d990a346b02847ff593a149ab832bec7e2b79d37e0fc23b8f",
+    "payload": {
+      "alert_id": "ALT-a8ab888ee61f",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 54.213351576765646,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-2371",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-2372": 0.2737200598721001,
+        "PERMIT-2026-1285": 0.19288631088527136,
+        "Zone-B-PumpStation": 0.19281158638509724,
+        "SEN-LEL-2374": 1.3672536564190915e-08,
+        "SEN-TEM-2375": 1.2782715970144062e-21,
+        "SEN-TEM-2373": 3.3788366032661994e-24,
+        "SEN-LEL-2376": 2.082190628134985e-27
+      },
+      "timestamp": "2026-07-22T02:04:49.989050Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.024587Z",
+    "hash": "db6e5b32d54c69620535b81ff0eef2905348dc69576608ddb3078ad6f5aade2d",
+    "payload": {
+      "alert_id": "ALT-0b2b88e6fffa",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1290 co-located with Flammable Gas Sensor SEN-LEL-2381 (Z=4.67, distance=8.7m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-1290",
+      "affected_zones": [
+        "Zone-B-PumpStation",
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1290 co-located with Flammable Gas Sensor SEN-LEL-2381 (Z=4.67, distance=8.7m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-1290",
+          "SEN-LEL-2381"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-A-BoilerRoom": 0.2845153606447502,
+        "PERMIT-2026-1290": 0.22534745443365561,
+        "SEN-VIB-2382": 6.932640915740364e-08,
+        "SEN-PRE-2385": 4.9817346025200276e-08,
+        "SEN-H2S-2384": 1.1040682559500478e-09,
+        "SEN-LEL-2383": 1.9302392616500762e-10,
+        "SEN-H2S-2386": 1.9602146468430257e-38
+      },
+      "timestamp": "2026-07-22T02:04:50.022755Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.058887Z",
+    "hash": "0b4672b37e4aa58391b6e3a84a73233f3ef290b2db57999425d0c191e4f6170e",
+    "payload": {
+      "alert_id": "ALT-8c449393a459",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 59.898686442438496,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-PRE-2391",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "PERMIT-2026-1295": 0.2862118251278704,
+        "Zone-C-Storage": 0.2715342989035622,
+        "SEN-LEL-2394": 2.37994724559617e-28,
+        "SEN-PRE-2393": 6.677274752403446e-32,
+        "SEN-PRE-2392": 2.8313644615617282e-52
+      },
+      "timestamp": "2026-07-22T02:04:50.058887Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.095267Z",
+    "hash": "8ef0a7b0ca7d359f8a86cb9e61559c9b9d3dbd9ba041792e6ef4374758a98700",
+    "payload": {
+      "alert_id": "ALT-58acb265595f",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 64.05071527946752,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-A-BoilerRoom",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-PRE-2421": 0.18304005163612874,
+        "SEN-TEM-2423": 0.05408097605210382,
+        "SEN-H2S-2424": 0.01778999347773487,
+        "SEN-H2S-2422": 0.01632934138214555,
+        "SEN-H2S-2425": 0.008231070523930286
+      },
+      "timestamp": "2026-07-22T02:04:50.095267Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.125404Z",
+    "hash": "a5ad7e53eb50bc7b407c7f37eec2242d44ce9f7a96bf893c8bed6209fdefd701",
+    "payload": {
+      "alert_id": "ALT-e6c4913cc90c",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 52.11328650313207,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-LEL-2471",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.29912256510733454,
+        "PERMIT-2026-1335": 0.24649794519441828,
+        "SEN-TEM-2473": 3.210682009578e-34,
+        "SEN-VIB-2472": 9.27321133147635e-47
+      },
+      "timestamp": "2026-07-22T02:04:50.125404Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.152158Z",
+    "hash": "bb5ce64bc5ec769c1e3e80e119afd2a269d5e2595fb4ce5ba4058d1cbf1f41fd",
+    "payload": {
+      "alert_id": "ALT-0433c05eeda4",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1345 co-located with Flammable Gas Sensor SEN-LEL-2491 (Z=4.00, distance=4.1m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-1345",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1345 co-located with Flammable Gas Sensor SEN-LEL-2491 (Z=4.00, distance=4.1m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-1345",
+          "SEN-LEL-2491"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-1345": 0.29294713820234064,
+        "Zone-E-Control": 0.2666457521968343,
+        "SEN-TEM-2492": 4.0446096734181266e-52,
+        "SEN-LEL-2493": 2.7986876201603276e-59
+      },
+      "timestamp": "2026-07-22T02:04:50.152158Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.180786Z",
+    "hash": "e6c05273341248ffb8ee6ecdb03388090551e7efc207be7a9cce486e19ca00d2",
+    "payload": {
+      "alert_id": "ALT-5aecd5308e34",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1350 co-located with Flammable Gas Sensor SEN-LEL-2501 (Z=3.97, distance=6.7m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-1350",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1350 co-located with Flammable Gas Sensor SEN-LEL-2501 (Z=3.97, distance=6.7m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-1350",
+          "SEN-LEL-2501"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-1350": 0.22373366000789066,
+        "Zone-A-BoilerRoom": 0.20964175431097457,
+        "SEN-VIB-2502": 0.09466976703739212,
+        "SEN-PRE-2503": 0.07418183256812093,
+        "SEN-LEL-2504": 5.006722867661936e-45
+      },
+      "timestamp": "2026-07-22T02:04:50.180786Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.218056Z",
+    "hash": "2bd93d96b47dbc6746033df4c037a81511727af70c64704b23ed80b5644e9d11",
+    "payload": {
+      "alert_id": "ALT-67390abd8165",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.02690265375403,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-2541",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-2542": 0.2921836218345165,
+        "PERMIT-2026-1370": 0.2045889976728884,
+        "Zone-C-Storage": 0.1728391486855747,
+        "SEN-TEM-2544": 0.008181033054452693,
+        "SEN-LEL-2543": 1.704230120522235e-33
+      },
+      "timestamp": "2026-07-22T02:04:50.217139Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.244520Z",
+    "hash": "bd99c36ba4776c57d23214ffc7ad2079b38174fed0cb3afc3b0873e53eee3f30",
+    "payload": {
+      "alert_id": "ALT-1f007afb9d64",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 49.45282366367585,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-2611",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-2612": 0.28410424102103277,
+        "PERMIT-2026-1405": 0.1994879018418903,
+        "Zone-C-Storage": 0.18890692187755057,
+        "SEN-TEM-2613": 1.4879870811385429e-30,
+        "SEN-LEL-2615": 1.438488918854818e-32,
+        "SEN-VIB-2614": 2.235190212608083e-40
+      },
+      "timestamp": "2026-07-22T02:04:50.244520Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.276967Z",
+    "hash": "d3964bb1fefa29907a8f31374ea53685cfbd3fac91e928a83083c9da296ab695",
+    "payload": {
+      "alert_id": "ALT-5e0960b06a95",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 70.60241884541006,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-PRE-2711",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-C-Storage": 0.25054543796707923,
+        "PERMIT-2026-1455": 0.21009397063212856,
+        "SEN-VIB-2716": 1.3781529173439795e-46,
+        "SEN-PRE-2712": 1.865797566438831e-47,
+        "SEN-PRE-2715": 1.0667369943101012e-47,
+        "SEN-H2S-2713": 1.5248089088781377e-49,
+        "SEN-VIB-2714": 2.5399267849078085e-51
+      },
+      "timestamp": "2026-07-22T02:04:50.276967Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.317993Z",
+    "hash": "bfd516bdc07f53f6e9a26061b27798eef252b8f691c8f665516d885d1458e9a1",
+    "payload": {
+      "alert_id": "ALT-aeeb9052db7c",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 70.35020857860881,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-2801",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-E-Control": 0.2606064060994567,
+        "PERMIT-2026-1500": 0.19236562304170055,
+        "SEN-H2S-2803": 0.11218769099456366,
+        "SEN-H2S-2802": 6.297928998804834e-25,
+        "SEN-TEM-2804": 8.215734611267289e-47,
+        "SEN-VIB-2805": 2.3600972818742928e-54
+      },
+      "timestamp": "2026-07-22T02:04:50.317257Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.358336Z",
+    "hash": "7cc885709a38db62fd0a28a0edf40c6cccd48c778b5e8506763af8bad3046158",
+    "payload": {
+      "alert_id": "ALT-63a831ca1f55",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.51971264739391,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-2811",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-2812": 0.2838215497116993,
+        "PERMIT-2026-1505": 0.1998241813882617,
+        "Zone-E-Control": 0.17314693097696882,
+        "SEN-H2S-2814": 0.02219294623406574,
+        "SEN-VIB-2813": 3.232373098468781e-12
+      },
+      "timestamp": "2026-07-22T02:04:50.358336Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.413491Z",
+    "hash": "d52a3a839b3d0bfae6a25b383acfbaeda1da8d3a0627e2c1d667787a34b27065",
+    "payload": {
+      "alert_id": "ALT-c57f13eb561d",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 40.015163316224296,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-3011",
+      "affected_zones": [
+        "Zone-D-Loading"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-3012": 0.293669903354673,
+        "PERMIT-2026-1605": 0.20380014361600615,
+        "Zone-D-Loading": 0.17119128843811016,
+        "SEN-VIB-3013": 0.01945947766721704
+      },
+      "timestamp": "2026-07-22T02:04:50.413491Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.530836Z",
+    "hash": "769a053d56af1ebbc8d96fe4660836558c2eceef26b00f0dfc35b3533c5a77a5",
+    "payload": {
+      "alert_id": "ALT-30139a0770bb",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1620 co-located with Flammable Gas Sensor SEN-LEL-3041 (Z=4.77, distance=10.6m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-1620",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1620 co-located with Flammable Gas Sensor SEN-LEL-3041 (Z=4.77, distance=10.6m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-1620",
+          "SEN-LEL-3041"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.30458784466362243,
+        "PERMIT-2026-1620": 0.23189203759357843,
+        "SEN-H2S-3042": 1.0619818328066959e-31,
+        "SEN-PRE-3043": 3.3131233326674966e-32,
+        "SEN-LEL-3044": 1.972317077808256e-32
+      },
+      "timestamp": "2026-07-22T02:04:50.530836Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.564928Z",
+    "hash": "53b1d2a8d2a592c0a4f92593131f5b5d8e04384cab00b4694615b183b38960a0",
+    "payload": {
+      "alert_id": "ALT-139ac6e12777",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 62.93571244556559,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-3091",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.29493978260375203,
+        "SEN-VIB-3093": 0.2075586386109232,
+        "SEN-VIB-3094": 1.6184481353867119e-37,
+        "SEN-VIB-3095": 3.074087022989753e-42,
+        "SEN-LEL-3092": 1.2147357251671305e-69
+      },
+      "timestamp": "2026-07-22T02:04:50.564928Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.596998Z",
+    "hash": "f30cab64cb7ef3fddad8d5ef038b0bdd9110fe46ba7720e664c7c61b9adb7b12",
+    "payload": {
+      "alert_id": "ALT-231da003f1dc",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 60.70358671822024,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-B-PumpStation",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-PRE-3121": 0.20262482352304761,
+        "SEN-LEL-3124": 0.04455998126849744,
+        "SEN-TEM-3125": 0.012996661203311754,
+        "SEN-TEM-3123": 0.008045552173478705,
+        "SEN-H2S-3122": 0.006788993911767431
+      },
+      "timestamp": "2026-07-22T02:04:50.596998Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.635515Z",
+    "hash": "607289071627412078783c2aa112eb83b1ebfeffc4f97e58571e543942f8cb4c",
+    "payload": {
+      "alert_id": "ALT-2667d143be1a",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1705 co-located with Flammable Gas Sensor SEN-LEL-3211 (Z=5.11, distance=8.8m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-1705",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-1705 co-located with Flammable Gas Sensor SEN-LEL-3211 (Z=5.11, distance=8.8m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-1705",
+          "SEN-LEL-3211"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-1705": 0.2944024213999244,
+        "Zone-C-Storage": 0.27348748755825114,
+        "SEN-LEL-3212": 1.6549295027277105e-41
+      },
+      "timestamp": "2026-07-22T02:04:50.635515Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.678017Z",
+    "hash": "6a989a393d54e3f872d65d11998c1bb5235ac7dbe3804d77449a77939ce8332a",
+    "payload": {
+      "alert_id": "ALT-1cc657581f7e",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 54.45752825563761,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-3301",
+      "affected_zones": [
+        "Zone-B-PumpStation",
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-3302": 0.2728321390216837,
+        "Zone-A-BoilerRoom": 0.20190286629211904,
+        "PERMIT-2026-1750": 0.18770797083866375,
+        "SEN-VIB-3306": 9.175969284200851e-09,
+        "SEN-TEM-3303": 4.415951720228426e-13,
+        "SEN-LEL-3305": 1.2551818798261955e-44,
+        "SEN-TEM-3304": 2.1213842749711505e-49
+      },
+      "timestamp": "2026-07-22T02:04:50.677008Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.711092Z",
+    "hash": "5b83256830f1cacdd4a47f9759226595680678201662efa0c8e480b02322ecd1",
+    "payload": {
+      "alert_id": "ALT-88c23ea35e55",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 75.76887145512748,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-C-Storage",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-PRE-3331": 0.1545004638490588,
+        "SEN-LEL-3332": 0.03984731452001945,
+        "SEN-TEM-3335": 0.0344014561913946,
+        "SEN-VIB-3334": 0.03301083794930721,
+        "SEN-H2S-3336": 0.02284075989327453,
+        "SEN-LEL-3333": 0.011420379946637227
+      },
+      "timestamp": "2026-07-22T02:04:50.711092Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.752922Z",
+    "hash": "0032dfd692c03533ba035d452479da336db9ecccf6cd65843cbdebd2a19fc3b4",
+    "payload": {
+      "alert_id": "ALT-3cdfdca4a48d",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 48.75682613431653,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-3472",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-3471": 0.2910033615263659,
+        "PERMIT-2026-1835": 0.21375970958352977,
+        "Zone-E-Control": 0.18114369125289026,
+        "SEN-H2S-3475": 9.518923612955373e-65,
+        "SEN-PRE-3473": 2.3594091824918392e-66,
+        "SEN-H2S-3474": 1.3923407034481016e-72
+      },
+      "timestamp": "2026-07-22T02:04:50.752412Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.785302Z",
+    "hash": "01a7b15265d1993f97d1f321e7d7c116e128c3732a3735ef127a71e0bd045ff5",
+    "payload": {
+      "alert_id": "ALT-53873a332e22",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 39.62835606127884,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-3641",
+      "affected_zones": [
+        "Zone-E-Control"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-3642": 0.30476672504400126,
+        "PERMIT-2026-1920": 0.2150395962133443,
+        "Zone-E-Control": 0.1725435843870668
+      },
+      "timestamp": "2026-07-22T02:04:50.785302Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.814584Z",
+    "hash": "94c5a40a488618d86a47950a94a73a4286828986b9285c176608f5d89dab80eb",
+    "payload": {
+      "alert_id": "ALT-259ca3b8237e",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 40.571589027912594,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-3662",
+      "affected_zones": [
+        "Zone-D-Loading"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-3661": 0.30483119776538303,
+        "PERMIT-2026-1930": 0.21202286978708443,
+        "Zone-D-Loading": 0.17336334635460618
+      },
+      "timestamp": "2026-07-22T02:04:50.814584Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.852521Z",
+    "hash": "ae87244fd272f9e0363893c49bb447afff60aff9d2d77df35cefdf96d52a0d79",
+    "payload": {
+      "alert_id": "ALT-775553402f94",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 65.49891162094917,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-LEL-3671",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.33992016350602167,
+        "SEN-LEL-3673": 0.15273657365851118,
+        "SEN-VIB-3675": 3.0422151541161284e-29,
+        "SEN-VIB-3674": 1.510412424775648e-29,
+        "SEN-VIB-3672": 1.132099616378475e-36,
+        "SEN-LEL-3676": 2.464515691316967e-44
+      },
+      "timestamp": "2026-07-22T02:04:50.852521Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.903615Z",
+    "hash": "9da8470d7aaf78c7cb42282c9f24165a05e9bba25d05ad0600525e494ca8c54b",
+    "payload": {
+      "alert_id": "ALT-b0f8eaf55b45",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 75.90376545035592,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-D-Loading",
+      "affected_zones": [
+        "Zone-B-PumpStation",
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-PRE-3751": 0.16782423442805416,
+        "SEN-TEM-3756": 0.03484623734641421,
+        "SEN-H2S-3755": 0.02317161332694335,
+        "SEN-LEL-3753": 0.018572453066663625,
+        "SEN-H2S-3754": 0.01779138017688481,
+        "SEN-H2S-3752": 0.013923635164208099
+      },
+      "timestamp": "2026-07-22T02:04:50.903615Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:50.970428Z",
+    "hash": "104e41cd1c284a60cbbcaa4938c01e444bd7a932a8cd267e7ddfd346d80712bc",
+    "payload": {
+      "alert_id": "ALT-a911cdefd27d",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 55.642487570072795,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-3831",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-3832": 0.28758438627120947,
+        "Zone-E-Control": 0.1719086388641467,
+        "PERMIT-2026-2015": 0.1643853990976127,
+        "SEN-VIB-3833": 0.06100567719830055,
+        "SEN-LEL-3834": 1.523057518967304e-45,
+        "SEN-H2S-3835": 1.7926925683612915e-62
+      },
+      "timestamp": "2026-07-22T02:04:50.970428Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.021157Z",
+    "hash": "b2b3a79c8544aa5a3486612a93985509ad02056a7a267420e5eb0a8b2cdc1c39",
+    "payload": {
+      "alert_id": "ALT-be388ba08c00",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 59.64095692788819,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-3871",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-E-Control",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-E-Control": 0.28118193799769275,
+        "PERMIT-2026-2035": 0.27917501324102545,
+        "SEN-LEL-3873": 6.52224179516168e-11,
+        "SEN-TEM-3874": 8.891646011068909e-25,
+        "SEN-LEL-3872": 1.662118463843804e-27
+      },
+      "timestamp": "2026-07-22T02:04:51.021157Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.081834Z",
+    "hash": "09cc33d18c86e985bb77df74d9cc4b329c5de09951298aed7e18187d678122f5",
+    "payload": {
+      "alert_id": "ALT-fe864f43f56a",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-2115 co-located with Flammable Gas Sensor SEN-LEL-4031 (Z=4.66, distance=4.3m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-2115",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-E-Control",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-2115 co-located with Flammable Gas Sensor SEN-LEL-4031 (Z=4.66, distance=4.3m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-2115",
+          "SEN-LEL-4031"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-B-PumpStation": 0.29034543827118187,
+        "PERMIT-2026-2115": 0.2559372055735652,
+        "SEN-H2S-4035": 5.569808580672333e-13,
+        "SEN-LEL-4036": 3.605736589094626e-15,
+        "SEN-H2S-4034": 3.161353935468478e-23,
+        "SEN-H2S-4033": 1.6805769973886843e-27,
+        "SEN-LEL-4032": 7.615469071371242e-32
+      },
+      "timestamp": "2026-07-22T02:04:51.079803Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.129360Z",
+    "hash": "274aff659ece6bc6d142e1ca0f650e8deda08f11fb1cf87dbdbc64d319a424c6",
+    "payload": {
+      "alert_id": "ALT-206c315965ae",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.20401364603416,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-4061",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-A-BoilerRoom"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-E-Control": 0.3444818127280115,
+        "PERMIT-2026-2130": 0.2126889348441644,
+        "SEN-LEL-4062": 1.7326126852032208e-10
+      },
+      "timestamp": "2026-07-22T02:04:51.129360Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.178559Z",
+    "hash": "c2a92a0141394e5bd416514d970f7bac97c3b5671459e4586a49b856f3c39677",
+    "payload": {
+      "alert_id": "ALT-de3153c42a81",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 55.963334829172865,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-4101",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-4102": 0.28163493450920885,
+        "Zone-A-BoilerRoom": 0.1922651971758578,
+        "PERMIT-2026-2150": 0.1667808005682206,
+        "SEN-H2S-4105": 0.013828594246323229,
+        "SEN-VIB-4103": 1.2234641752539139e-47,
+        "SEN-TEM-4104": 4.106786216097042e-65
+      },
+      "timestamp": "2026-07-22T02:04:51.178559Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.238867Z",
+    "hash": "9f33041bcf273a81f908cfdb2891671fa4a11f6bb79e3a76a7fc4bc216879633",
+    "payload": {
+      "alert_id": "ALT-93a28476ec27",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 37.92729778034073,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-4172",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-4171": 0.3010694235780141,
+        "PERMIT-2026-2185": 0.21342882598596732,
+        "Zone-B-PumpStation": 0.17575025327325072,
+        "SEN-LEL-4173": 1.7091562013809128e-05
+      },
+      "timestamp": "2026-07-22T02:04:51.238867Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.294564Z",
+    "hash": "312952259f0fa1871e57277e857a823a72fed8af5da07c71e55f0de7b4be47e6",
+    "payload": {
+      "alert_id": "ALT-de653e1430c9",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 59.6508268913006,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "Zone-E-Control",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-LEL-4191": 0.17173822336949254,
+        "SEN-PRE-4192": 0.046326053115668675,
+        "SEN-PRE-4194": 0.04304850939942419,
+        "SEN-LEL-4193": 0.019803827069436706
+      },
+      "timestamp": "2026-07-22T02:04:51.294564Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.350196Z",
+    "hash": "676616710c3ccc41924d1328f654d86138bec3e9e5c00693227d111cc42697a9",
+    "payload": {
+      "alert_id": "ALT-0ca2cfa79c23",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 52.7970149216569,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-4221",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-D-Loading",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.35238887419736736,
+        "PERMIT-2026-2210": 0.183162739909115,
+        "SEN-TEM-4222": 1.5024317591569438e-16,
+        "SEN-TEM-4224": 4.759538991213028e-32,
+        "SEN-TEM-4223": 7.006000676461654e-48
+      },
+      "timestamp": "2026-07-22T02:04:51.348691Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.402357Z",
+    "hash": "b41699c52ee104462526ffae565e8aa870e6552dadc8a606966db3b9de12aeb1",
+    "payload": {
+      "alert_id": "ALT-9d55c78f98b0",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 37.40430829918721,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-4271",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-4272": 0.2921732368177546,
+        "PERMIT-2026-2235": 0.21857547878926753,
+        "Zone-D-Loading": 0.17788994651573578,
+        "SEN-VIB-4273": 7.511674145339384e-21
+      },
+      "timestamp": "2026-07-22T02:04:51.402357Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.453190Z",
+    "hash": "2df373be294bb47519ced062f47bf794f007934775edbad7f18cf9a17cc60c0c",
+    "payload": {
+      "alert_id": "ALT-26adb2e4c21a",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 45.98560162447705,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-H2S-4351",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-B-PumpStation": 0.32393017645128325,
+        "PERMIT-2026-2275": 0.23485913992388524,
+        "SEN-LEL-4352": 3.4776922958991935e-09
+      },
+      "timestamp": "2026-07-22T02:04:51.452676Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.496606Z",
+    "hash": "8becf2a287798ffd987d46d1ab3c28c38861ecb53eaba11e7a72d16792779796",
+    "payload": {
+      "alert_id": "ALT-f331b972841b",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 39.929145320983665,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-TEM-4381",
+      "affected_zones": [
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-VIB-4382": 0.2929606383525334,
+        "PERMIT-2026-2290": 0.2129561023527118,
+        "Zone-B-PumpStation": 0.16116767171656726,
+        "SEN-VIB-4383": 0.03717132571592027
+      },
+      "timestamp": "2026-07-22T02:04:51.496606Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.546623Z",
+    "hash": "73dede191dea94de7a1afb4b6a9a15f9472d76714a519120c79f2b4052002b17",
+    "payload": {
+      "alert_id": "ALT-d215d7624a49",
+      "title": "Propagation Alert: MEDIUM Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "MEDIUM",
+      "risk_score": 48.37891823824989,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-4392",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-4391": 0.2873361001662765,
+        "PERMIT-2026-2295": 0.21601956363196503,
+        "Zone-C-Storage": 0.18188051048569598,
+        "SEN-PRE-4394": 0.00013490680443952087,
+        "SEN-TEM-4395": 4.935239486072936e-19,
+        "SEN-LEL-4393": 3.5532784338891433e-50
+      },
+      "timestamp": "2026-07-22T02:04:51.546087Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.594236Z",
+    "hash": "29f3c9c1dfe4c4479f8c01b92941dc95e66cd35f8d78ce8f40fa1b6dcc939354",
+    "payload": {
+      "alert_id": "ALT-7b8f8d0994a8",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-2305 co-located with Flammable Gas Sensor SEN-LEL-4411 (Z=5.39, distance=1.0m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-2305",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-A-BoilerRoom",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-2305 co-located with Flammable Gas Sensor SEN-LEL-4411 (Z=5.39, distance=1.0m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-2305",
+          "SEN-LEL-4411"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-A-BoilerRoom": 0.2666537262228787,
+        "PERMIT-2026-2305": 0.22897620962735238,
+        "SEN-TEM-4412": 3.572769971502233e-10,
+        "SEN-PRE-4413": 1.692605095552461e-33,
+        "SEN-VIB-4415": 2.263923712439748e-34,
+        "SEN-PRE-4414": 2.2117408564210997e-65
+      },
+      "timestamp": "2026-07-22T02:04:51.594236Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.654096Z",
+    "hash": "31d90835cb068c04f3913e70f893834757b92c6a19eafb742fce9a8005122beb",
+    "payload": {
+      "alert_id": "ALT-474118c28493",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 38.625054175296725,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-LEL-4541",
+      "affected_zones": [
+        "Zone-D-Loading"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.40724687209252813,
+        "SEN-H2S-4542": 0.06230789844274548
+      },
+      "timestamp": "2026-07-22T02:04:51.654096Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.722350Z",
+    "hash": "2a21dea8c42f119dd21fde41ab771bbd1d16276d3fe282bb23a328c849ab6d54",
+    "payload": {
+      "alert_id": "ALT-3c11fcd7145b",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-2480 co-located with Flammable Gas Sensor SEN-LEL-4761 (Z=5.48, distance=6.6m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-2480",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-2480 co-located with Flammable Gas Sensor SEN-LEL-4761 (Z=5.48, distance=6.6m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-2480",
+          "SEN-LEL-4761"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-2480": 0.2798456791939294,
+        "Zone-E-Control": 0.279136854260928,
+        "SEN-TEM-4762": 2.106386981915144e-31,
+        "SEN-TEM-4763": 1.3153304894923364e-78
+      },
+      "timestamp": "2026-07-22T02:04:51.722350Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.777761Z",
+    "hash": "6570f482b5ff4dd3c87bc460b17ed46b9e2e83f054b0eb656e8c2c0a5200fcdd",
+    "payload": {
+      "alert_id": "ALT-53b758d6b94e",
+      "title": "Propagation Alert: LOW Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "LOW",
+      "risk_score": 40.00430632594807,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-VIB-4822",
+      "affected_zones": [
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "SEN-TEM-4821": 0.3037954895161232,
+        "PERMIT-2026-2510": 0.2158768467405302,
+        "Zone-C-Storage": 0.1723160688500886
+      },
+      "timestamp": "2026-07-22T02:04:51.777761Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.828387Z",
+    "hash": "9740e5a48c08377b1d8b95610f615d37ea7b411706d190d01243f8a795d31294",
+    "payload": {
+      "alert_id": "ALT-4285b5664723",
+      "title": "Propagation Alert: HIGH Risk Detected",
+      "triggered_by": "PROPAGATION",
+      "risk_level": "HIGH",
+      "risk_score": 65.99359683327789,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "SEN-LEL-4901",
+      "affected_zones": [
+        "Zone-D-Loading",
+        "Zone-B-PumpStation",
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": null,
+      "contributing_node_ids": {
+        "Zone-B-PumpStation": 0.3530939701412118,
+        "SEN-VIB-4902": 0.1224746143237211,
+        "SEN-H2S-4904": 0.027673730983483687,
+        "SEN-TEM-4903": 8.891266211140116e-25,
+        "SEN-VIB-4906": 1.1472876639495557e-25,
+        "SEN-PRE-4905": 1.4194166103623517e-36
+      },
+      "timestamp": "2026-07-22T02:04:51.828387Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:04:51.889078Z",
+    "hash": "05d4628ee3d3f1f0ca8b9bb658bb1b161b44b7c0e8f1f9826a68e00ce678a37b",
+    "payload": {
+      "alert_id": "ALT-5cf7f3e5c17f",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-2560 co-located with Flammable Gas Sensor SEN-LEL-4921 (Z=4.08, distance=10.8m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-2560",
+      "affected_zones": [
+        "Zone-C-Storage"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-2560 co-located with Flammable Gas Sensor SEN-LEL-4921 (Z=4.08, distance=10.8m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-2560",
+          "SEN-LEL-4921"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-C-Storage": 0.2981495769262518,
+        "PERMIT-2026-2560": 0.255612901492517,
+        "SEN-TEM-4922": 2.483017406237387e-09
+      },
+      "timestamp": "2026-07-22T02:04:51.888567Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T12:59:58.380199Z",
+    "hash": "cf97a51aeb1ba26aaf49c6f5d426ded41e0e139994e259092aa99484a26c2833",
+    "payload": {
+      "alert_id": "ALT-bdd29df9b5d7",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0440 co-located with Flammable Gas Sensor SEN-LEL-681 (Z=4.86, distance=2.0m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0440",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0440 co-located with Flammable Gas Sensor SEN-LEL-681 (Z=4.86, distance=2.0m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0440",
+          "SEN-LEL-681"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-0440": 0.27486299294891203,
+        "Zone-E-Control": 0.24708618309767563,
+        "SEN-VIB-683": 2.0403823825677072e-76,
+        "SEN-VIB-682": 3.0155639932726022e-80
+      },
+      "timestamp": "2026-07-22T12:59:58.379139Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T13:10:37.194714Z",
+    "hash": "b8c8205695528e7e0c9ee769f924b2c7fea8c946d76f6db70c7d59f13aa84a18",
+    "payload": {
+      "alert_id": "ALT-31712dba092a",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0440 co-located with Flammable Gas Sensor SEN-LEL-681 (Z=4.86, distance=2.0m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0440",
+      "affected_zones": [
+        "Zone-E-Control",
+        "Zone-D-Loading"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0440 co-located with Flammable Gas Sensor SEN-LEL-681 (Z=4.86, distance=2.0m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0440",
+          "SEN-LEL-681"
+        ]
+      },
+      "contributing_node_ids": {
+        "PERMIT-2026-0440": 0.2748631575622748,
+        "Zone-E-Control": 0.24708613545095537,
+        "SEN-VIB-683": 2.0403817689647913e-76,
+        "SEN-VIB-682": 3.0155634355677937e-80
+      },
+      "timestamp": "2026-07-22T13:10:37.194714Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T13:15:19.955726Z",
+    "hash": "80815be26c3b4db6d4d494973db5a7564bd0bff9152d95dc3442a6d92f77fb57",
+    "payload": {
+      "alert_id": "ALT-165e03bd2d80",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0535 co-located with Flammable Gas Sensor SEN-LEL-871 (Z=4.29, distance=12.9m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0535",
+      "affected_zones": [
+        "Zone-A-BoilerRoom",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0535 co-located with Flammable Gas Sensor SEN-LEL-871 (Z=4.29, distance=12.9m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0535",
+          "SEN-LEL-871"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-B-PumpStation": 0.23641966627466562,
+        "PERMIT-2026-0535": 0.1964613538171218,
+        "SEN-VIB-874": 0.08380632851211754,
+        "SEN-PRE-872": 0.05523312287364517,
+        "SEN-TEM-873": 3.7857820847516415e-14
+      },
+      "timestamp": "2026-07-22T13:15:19.955726Z"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T13:30:58.025498Z",
+    "hash": "140c5dd76c9597803e83de7b15f9470b26d54b1f58808fd6551a576d72ea04f0",
+    "payload": {
+      "alert_id": "ALT-ceb60559e3c4",
+      "title": "Rule-Guard Alert: Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0480 co-located with Flammable Gas Sensor SEN-LEL-761 (Z=4.40, distance=9.4m)",
+      "triggered_by": "RULE_GUARD",
+      "risk_level": "CRITICAL",
+      "risk_score": 100.0,
+      "confidence_score": 1.0,
+      "evidence_completeness": 1.0,
+      "primary_node_id": "PERMIT-2026-0480",
+      "affected_zones": [
+        "Zone-C-Storage",
+        "Zone-A-BoilerRoom",
+        "Zone-E-Control",
+        "Zone-D-Loading",
+        "Zone-B-PumpStation"
+      ],
+      "rule_guard_detail": {
+        "rule_id": "R-STATUTORY-001",
+        "passed": false,
+        "violation_title": "Statutory Interlock Violation: Active Hot Work Permit PERMIT-2026-0480 co-located with Flammable Gas Sensor SEN-LEL-761 (Z=4.40, distance=9.4m)",
+        "severity": "CRITICAL",
+        "statutory_reference": "OISD-STD-105 Clause 6.2.1 / OSHA 29 CFR 1910.252(a)(2)",
+        "triggered_nodes": [
+          "PERMIT-2026-0480",
+          "SEN-LEL-761"
+        ]
+      },
+      "contributing_node_ids": {
+        "Zone-D-Loading": 0.2811414489427239,
+        "PERMIT-2026-0480": 0.2579353037236429,
+        "SEN-VIB-765": 2.2333631604903e-11,
+        "SEN-VIB-762": 2.6083672160766904e-35,
+        "SEN-PRE-764": 1.116067439364463e-38,
+        "SEN-LEL-763": 1.04766763541448e-51
+      },
+      "timestamp": "2026-07-22T13:30:58.025498Z"
+    }
+  }
+]

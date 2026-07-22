@@ -24,6 +24,7 @@ import ScalabilityArchitectureModal from './components/ScalabilityArchitectureMo
 import CommandPaletteModal from './components/CommandPaletteModal';
 import SettingsModal from './components/SettingsModal';
 import ToastNotification from './components/ToastNotification';
+import ProofSequenceOverlay from './components/ProofSequenceOverlay';
 
 import {
   fetchScenarios,
@@ -52,6 +53,7 @@ export default function App() {
   const [isArchitectureOpen, setIsArchitectureOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isProofSequenceOpen, setIsProofSequenceOpen] = useState(false);
 
   const [activeAlertForExplainer, setActiveAlertForExplainer] = useState(null);
   const [activeToast, setActiveToast] = useState(null);
@@ -310,6 +312,15 @@ export default function App() {
               <FileText className="w-[16px] h-[16px]" strokeWidth={1.5} />
               Statutory Compliance
             </button>
+
+            <div className="pt-4 pb-2">
+              <button
+                onClick={() => setIsProofSequenceOpen(true)}
+                className="w-full flex items-center justify-center gap-[8px] bg-emerald-600 hover:bg-emerald-500 text-white py-[8px] rounded-[6px] text-[13px] font-bold font-mono-tech transition-colors shadow-lg shadow-emerald-900/50 border border-emerald-400/30"
+              >
+                Run Proof Sequence
+              </button>
+            </div>
           </nav>
         </div>
 
